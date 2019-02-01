@@ -1,0 +1,1 @@
+# mojespani.cz
