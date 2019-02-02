@@ -1,0 +1,388 @@
+::placeholder{
+  
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input{
+    @include f-16-primary-regular;
+    border: 0;
+    border-radius: $border-radius-primary;
+    padding: 0 2rem;
+}
+
+.o-form{
+    background: $bg-white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: $border-radius-primary;
+
+    &.-noMargin{
+        margin: 0;
+    }
+    &.-disabled{
+        input, .m-formGroup.-radiobutton, .m-formGroup.-checkbox, .m-formGroup.-switch{
+            background: $bg-white;
+        }
+        .m-formGroup__success{
+            display: none;
+        }
+    }
+}
+.o-form__collapseToggler{
+    width: 100%;
+    margin-bottom: 0px;
+    @include f-16-primary-medium;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: $bg-light;
+    border-radius: $border-radius-primary;
+
+    &:hover, &:active, &:focus{
+        text-decoration: none;
+        background: $bg-grey;
+    }
+}
+.o-form__collapseTogglerIcon{
+    height: 10px;
+    transform: rotate(90deg);
+
+}
+.o-form__collapseToggler[aria-expanded="true"] .o-form__collapseTogglerIcon{
+    transform: rotate(-90deg); 
+}
+.o-form__collapse{
+  
+}
+.o-form__title{
+    @include f-24-primary-medium;
+    text-align: center;
+    margin: 0;
+    padding: 2rem 0 2rem 0;
+}
+.o-form__text{
+    @include f-14-dark-regular;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.o-form__link{
+    display: block;
+    @include f-14-dark-medium;
+    text-align: center;
+    margin-top: 2rem; 
+
+    &.-alt{
+        color: $text-brand;
+        margin: 2rem;
+    }
+}
+
+.o-form__divider{
+
+}
+
+@media screen and (max-width: 991px){
+    .o-form{
+        margin: 5px 0;
+    }
+    .o-form__collapseToggler{
+        display: flex;
+    }
+}
+
+
+.m-formDivider{
+    @include f-14-dark-regular;
+    border-bottom: 1px solid $border-grey;
+    margin: 2rem 0;
+}
+
+.m-formGroup{
+    padding: 0;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: $border-radius-primary;
+
+    &.-radiobutton, &.-checkbox, &.-switch{
+        background: $bg-light;
+        min-height: 5.4rem;
+        display: flex;
+        flex-direction: row;
+        padding: 1.5rem 2rem;
+
+        .m-formGroup__input{
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: pointer;
+            z-index: 2;
+
+            &:checked + .m-formGroup__radiobutton::after, &:checked + .m-formGroup__checkbox::after{
+                opacity: 1;
+            }
+            &:checked + .m-formGroup__checkbox::before{
+                background: $bg-brand-secondary;
+                border: 0;
+            }
+            &:checked + .m-formGroup__switch::before{
+                background: $bg-brand-secondary;
+            }
+            &:checked + .m-formGroup__switch::after{
+                right: 0;
+                left: 100%;
+                transform: translateX(-100%);
+                background: $bg-brand-secondary;
+            }
+        }
+        .m-formGroup__label{
+            position: relative;
+            transform: none;
+            top: 0;
+            left: auto;
+            padding-left: 15px;
+            color: $text-primary;
+            z-index: 3;
+            cursor: pointer;
+            padding-bottom: 0;
+            opacity: 1;
+        }
+    }
+
+    &.-range{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+
+        .m-formGroup__rangewWrap{
+            position: relative;
+            height: 5.4rem;
+            width: 100%;
+
+            &::after{
+                content: "";
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                left: 0;
+                background: $bg-light;
+                height: 8px;
+                width: 100%;
+                z-index: -1;
+                border-radius: $border-radius-primary;
+            }
+        }
+        .m-formGroup__input{
+            background: transparent; 
+            padding: 0;
+            position: absolute;
+            top: 0;
+            margin: 0;
+        }
+        .m-formGroup__label{
+            position: relative;
+            transform: none;
+            top: 0;
+            left: auto;
+            padding-left: 0;
+            color: $text-primary;
+            transition: 0s ease all;
+            flex-grow: 1;
+            opacity: 1;
+
+            &:last-child{
+                text-align: right;
+            }
+        }
+    }
+    &.-textarea{
+        .m-formGroup__label{
+            transform: none;
+            top: 14px;
+        }
+        .m-formGroup__input{
+            display: flex;
+            height: auto;
+            padding: 2.5rem 2rem 0 2rem;
+        }
+        & .m-formGroup__input:focus, & .m-formGroup__input:not(:placeholder-shown){
+            padding: 2.5rem 2rem 0 2rem;
+        }
+    }
+    &.-noMargin{
+        margin: 0;
+    }
+}
+.m-formGroup__label{
+    @include f-16-dark-regular;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2rem;
+    transition: 0.2s ease all;
+    margin: 0;
+    cursor: text;
+    opacity: 0.8;
+
+    &.-small{
+        font-size: 1.4rem;
+        padding-top: 2px;
+        a{
+            @include f-14-primary-regular;
+            color: $text-brand;
+        }
+    }
+    a{
+        @include f-16-primary-regular;
+        color: $text-brand;
+    }
+}
+.m-formGroup__input::placeholder{
+    font-size: 0;
+}
+.m-formGroup__input{
+    height: 5.4rem;
+    @include f-16-primary-medium;
+    padding: 0 2rem;
+    border: 0;
+    background: $bg-light;
+    border-radius: $border-radius-primary;
+    width: 100%;
+
+    &:disabled{
+        background: $bg-white;
+    }
+}
+.m-formGroup__error{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding: 5px 1rem;
+    @include f-12-white-regular;
+    background: $bg-red;
+    border-bottom-right-radius: $border-radius-primary;
+    border-bottom-left-radius: $border-radius-primary;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    transform: translateY(-3px);
+}
+.m-formGroup__success{
+    height: 2px;
+    width: 0%;
+    background: $bg-green;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.2s ease all;
+}
+
+.o-form__legal{
+    @include f-14-primary-regular;
+    margin-bottom: 2rem;
+    a{
+        @include f-14-primary-regular;
+        color: $text-brand;
+    }
+}
+.m-formGroup__muted{
+    color: $text-medium;
+}
+
+/*push up*/
+
+.m-formGroup__input:focus, .m-formGroup__input:not(:placeholder-shown){
+    padding: 1.4rem 2rem 0 2rem;
+}
+.m-formGroup__input:focus + .m-formGroup__label, 
+.m-formGroup__input:not(:placeholder-shown) + .m-formGroup__label{
+    font-size: 12px;
+    top: 8px;
+    transform: translateY(0%);
+}
+
+
+
+/*validation*/
+
+.m-formGroup__input:valid:not(:placeholder-shown):not([type="date"]) ~ .m-formGroup__success{
+    width: 100%;
+}
+
+.m-formGroup__input:not(:focus):invalid:not(:placeholder-shown):not([type="date"]){
+    border: 2px solid $border-red;
+}
+
+
+
+.m-formGroup__input:not(:focus):invalid:not(:placeholder-shown):not([type="date"]) + .m-formGroup__label + .m-formGroup__error{
+    display: block;
+}
+#filter-range-input-2{
+    right: 0;
+}
+/* IE Edge 16+ CSS */ 
+@supports (-ms-ime-align:auto){
+    .m-formGroup{
+        display: flex;
+        flex-direction: column;
+    }
+    .m-formGroup__label{
+        transform: none;
+        order: 0;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding-bottom: 5px;
+    }
+    .m-formGroup__input{
+        order: 1;
+    }
+    .m-formGroup__rangewWrap .m-formGroup__input{
+        height: 100%;
+        width: 100%;
+    }
+    .o-filter__single{
+        width: 25%;
+    }
+    .o-filter__single:nth-child(2){
+        display: none;
+    }
+}
+/* IE 10, 11 CSS */ 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+    .m-formGroup{
+        display: flex;
+        flex-direction: column;
+    }
+    .m-formGroup__label{
+        transform: none;
+        order: 0;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding-bottom: 5px;
+    }
+    .m-formGroup__input{
+        order: 1;
+    }
+    .o-filter__single{
+        width: 25%;
+    }
+    .o-filter__single:nth-child(2){
+        display: none;
+    }
+}
+

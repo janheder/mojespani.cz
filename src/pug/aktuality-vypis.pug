@@ -1,0 +1,29 @@
+doctype html
+include partials/_variables.pug  
+html(lang=lang)
+    include partials/_header.pug  
+    body
+        include partials/_navMain.pug
+        include partials/_navProducts.pug
+        
+        section.o-pageHeading.b-bgCover__wrap
+            include partials/_breadcrumb-transparent.pug
+            .container.o-pageHeading__container
+                h1.o-pageHeading__title Aktuality
+            img.lazy.o-pageHeading__img.b-bgCover__img(src=URLbase+"img/lazy/lazy-news-archive-thumb-large.jpg" data-src=URLbase+"img/news-archive-thumb-large.jpg" alt="#" title="#")
+
+
+        main
+            .container
+                .row                                       
+                    - for (var i=0; i<10; i++)
+                        .col-12.col-sm-12.col-md-6
+                            include partials/_news-single.pug
+
+
+                include partials/_pagination.pug
+
+
+        include partials/_footer.pug
+
+        include partials/_js-include.pug

@@ -1,0 +1,44 @@
+doctype html
+include partials/_variables.pug  
+html(lang=lang)
+    include partials/_header.pug  
+    body
+        include partials/_navMain.pug
+        include partials/_navProducts.pug
+                
+        include partials/_breadcrumb.pug
+        main
+            .container
+                .row
+
+                    .col-12.col-sm-12.col-md-12.col-lg-3
+
+                    .col-12.col-sm-12.col-md-12.col-lg-6
+
+                        form.o-form(method="post" action="" class="login-form" name="login_form")
+
+                            .m-alert.-danger Zadali jste špatné údaje
+                            h2.o-form__title Registrace byla úspěšná
+                            p.o-form__text Na Váš email jméno@adresa.cz, který jste uvedli při registraci, jsem Vám poslali aktivační odkaz. Kliknutím na něj aktivujete svůj účet a budete se moci přihlásit.
+
+                            .o-form__group.m-formGroup
+                                input.m-formGroup__input(type="email" name="login_form_email" id="login_form_email" autocomplete="email" required placeholder=" ")
+                                label.m-formGroup__label(for="login_form_email") Emailová adresa
+                                span.m-formGroup__error Neplatný email
+                                span.m-formGroup__success
+
+                            .o-form__group.m-formGroup
+                                input.m-formGroup__input(type="password" name="login_form_password" id="login_form_password" autocomplete="password" required placeholder=" ")
+                                label.m-formGroup__label(for="login_form_password") Heslo
+                                span.m-formGroup__error Neplatné heslo
+                                span.m-formGroup__success
+
+                            button.btn.-secondary.-fullWidth(type="submit" id="login_form_submit") Přihlásit se
+
+                            a.o-form__link(href="#") Obnovit zapomenuté heslo
+
+                    .col-12.col-sm-12.col-md-12.col-lg-3
+
+        include partials/_footer.pug
+
+        include partials/_js-include.pug
