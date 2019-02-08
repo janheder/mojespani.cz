@@ -4,31 +4,24 @@ footer.o-footer
         .container.o-footerContacts__container
             .row.o-footerContacts__row
                 .col-12.col-md-6.o-footerContacts__col
-                    .m-emailSubscribe
-                        h4.m-emailSubscribe__title Nenechte si ujít žádnou slevu
-                        p.m-emailSubscribe__text Odebírejte aktuální informace, oznámení o slevách a novinky na Váš email.
-                        form.m-emailSubscribe__form(method="post" action="")
-                            .m-emailSubscribe__inputWrap
-                                input.m-emailSubscribe__input(type="email" id="sub-email" name="sub-email" required placeholder="Zadejte Vaši emailovou adresu" autocomplete="email")
-                                button.btn.m-emailSubscribe__btn(type="submit" id="sub-button" name="sub-button") Odebírat
-                            label.m-emailSubscribe__agree
-                                input.m-emailSubscribe__check(type="checkbox" name="sub-check" required)
-                                span.m-emailSubscribe__checkbox
-                                span.m-emailSubscribe__inlineText Odesláním formuláře souhlasím se #[a(href="#") zpracovaním osobních údajů]
+                    h4.o-footerContacts__title Kontaktní informace
+                    .o-footerContacts__wrap
+                        .o-footerContacts__single #[.a-icon.-phone.-white.o-footerContacts__icon] +420 727 877 380
+                        .o-footerContacts__single #[.a-icon.-envelope.-white.o-footerContacts__icon] info@mojespani.cz
 
                 .col-12.col-md-6.o-footerContacts__col
-                    .m-questionsContact
-                        h4.m-questionsContact__title Nějaké dotazy? Kontaktujte nás na
-                        .m-questionsContact__contactWrap
-                            p.m-questionsContact__contact info@best-nabytek.cz
-                        .m-questionsContact__contactWrap
-                            p.m-questionsContact__contact 606 311 796
+
+                    h4.o-footerContacts__title Sledujte nás také na
+                    a.o-footerContacts__Socialwrap(href="#")
+                        .a-icon.-facebook.-white.o-footerContacts__socialIcon
+                        .o-footerContacts__socialName Facebook
+
             
             
     section.o-footerMain
         .container.o-footerMain__container
             .row.o-footerMain__row
-                .col-12.col-sm-6.col-lg-3
+                .col-6.col-sm-6.col-lg-3
                     h5.o-footerMain__title O nákupu
                     a.o-footerMain__link(href="#") Obchodní podmínky
                     a.o-footerMain__link(href="#") Reklamační řád
@@ -36,20 +29,20 @@ footer.o-footer
                     a.o-footerMain__link(href="#") Osobní odběry
                     a.o-footerMain__link(href="#") Možnosti platby
 
-                .col-12.col-sm-6.col-lg-3
+                .col-6.col-sm-6.col-lg-3
                     h5.o-footerMain__title Uživatelský účet
                     a.o-footerMain__link(href="#" data-toggle="modal" data-target="#modal-login") Přihlášení
                     a.o-footerMain__link(href="#") Vytvořit účet
                     a.o-footerMain__link(href="#") Zapomenuté údaje
 
-                .col-12.col-sm-6.col-lg-3
+                .col-6.col-sm-6.col-lg-3
                     h5.o-footerMain__title Další odkazy
                     a.o-footerMain__link(href="#") Výhody nákupu
                     a.o-footerMain__link(href="#") Doprava zdarma
                     a.o-footerMain__link(href="#") Ochrana osobních údajů
                     a.o-footerMain__link(href="#") Zásady používání cookie
 
-                .col-12.col-sm-6.col-lg-3
+                .col-6.col-sm-6.col-lg-3
                     h5.o-footerMain__title Kontaktní informace
                     p.o-footerMain__text Ondera Aleš
                     p.o-footerMain__text J.Čapka 3097

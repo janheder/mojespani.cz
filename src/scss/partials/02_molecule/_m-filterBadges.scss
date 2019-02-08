@@ -12,13 +12,13 @@
     align-items: center;
     justify-content: center;
     border-radius: $border-radius-primary;
-    background: $bg-dark;
+    background: $bg-light;
     padding: 0 0 0 10px;
-    height: 30px;
+    height: 40px;
     overflow: hidden;
 }
 .m-filterBadges__title{
-    @include f-14-white-medium;
+    @include f-14-primary-regular;
 }
 .m-filterBadges__remove{
     height: 100%;
@@ -27,13 +27,13 @@
     align-items: center;
     justify-content: center;
     margin-left: 5px;
-    padding: 0 5px;
-    background: rgba(0,0,0,0.1);
+    padding: 0 10px;
 
     &:hover, &:active, &:focus{
         background: $bg-brand;
     }
 }
 .m-filterBadges__Icon {
-    height: 10px;
+    height: 8px;
+    width: 8px;
 }

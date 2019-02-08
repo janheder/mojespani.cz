@@ -3,17 +3,15 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
-        include partials/_navMain.pug
-        include partials/_navProducts.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
 
-        section.o-pageHeading.b-bgCover__wrap
+        section.o-pageHeading
             include partials/_breadcrumb-transparent.pug
             .container.o-pageHeading__container
                 h1.o-pageHeading__title Postele
 
-
-            img.lazy.o-pageHeading__img.b-bgCover__img(src=URLbase+"img/lazy/lazy-category-thumb-large.jpg" data-src=URLbase+"img/category-thumb-large.jpg" alt="#" title="#")
-        
         include partials/_filter.pug
 
         
@@ -25,7 +23,7 @@ html(lang=lang)
                         .m-filterBadges__wrap
                             .m-filterBadges__title Filtr položka
                             a.m-filterBadges__remove(href="#")
-                                span.a-icon.-cross.-white.m-filterBadges__Icon 
+                                span.a-icon.-cross.m-filterBadges__Icon 
 
 
                 .o-productPagination
@@ -44,7 +42,7 @@ html(lang=lang)
 
 
                 .o-productBottomButton
-                    a.btn.o-productBottomButton__btn(href="#") Dalších 20 produktů
+                    a.btn.-dark.o-productBottomButton__btn(href="#") Dalších 20 produktů
                     include partials/_pagination.pug
 
  

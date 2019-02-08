@@ -79,11 +79,11 @@
 
 @media screen and (max-width:991px){
     .m-navSearch{
-        padding: 0;
-        transform: translateX(100%);
-        display: block;
+        padding: 5px;
+        display: none;
         position: absolute;
-        top: 0;
+        background: $bg-white;
+        top: 56px;
         left: 0;
         width: 100%;
         transition: 0.3s ease all;
@@ -91,16 +91,16 @@
         box-shadow: $box-shadow-primary;
 
         &.-active{
-            transform: translateX(0%);
+            display: block;
         }
     }
     .m-navSearch__close{
-        display: flex;
+        display: none;
     }
     .m-navSearch__input{
         height: 56px;
         border-radius: 0;
-        padding-left: 56px;
+        padding-left: 10px;
     }
     .m-navSearch__button{
         height: 56px;

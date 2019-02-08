@@ -3,10 +3,10 @@
 /* ========================================================================== */
 
 .btn{
-    @include f-16-white-medium;
+    @include f-16-white-regular;
     min-height: 5.4rem;
     height: 100%;
-    padding: 0rem 2.5rem 0rem 2.5rem;
+    padding: 0rem 3rem 0rem 3rem;
     background: $bg-brand;
     border-radius: $border-radius-primary;
     position: relative;
@@ -20,22 +20,20 @@
     white-space: normal;
 
     .a-btnIcon{
-        background: rgba(0,0,0,0.1);
+        background: transparent;
         min-height: 5.4rem;
         height: 100%;
-        width: 5.4rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-left: 2.5rem;
-        margin-right: -2.5rem;
+        margin-left: 1.2rem;
         flex-shrink: 0;
     }
     .a-icon{
         display: inline-block;
-        height: 12px;
-        width: 12px;
+        height: 8px;
+        width: 5px;
     }
     &:hover, &:active, &:focus{
         color: $text-white;
@@ -56,12 +54,12 @@
 }
 @media screen and (max-width: 400px){
     .btn{
-        padding: 0 1rem;
+        padding: 0 1.5rem;
 
         .a-btnIcon{
-            margin-left: 1rem;
-            margin-right: -1rem;
-            width: 3rem;
+            margin-left: 0.5rem;
+            margin-right: 0rem;
+            width: 2rem;
         }
     }
 }
@@ -70,7 +68,7 @@
 }
 .btn.-small{
     min-height: 4.8rem;
-    @include f-14-white-medium;
+    @include f-14-white-semibold;
 
     .a-btnIcon{
         min-height: 4.8rem;
@@ -125,7 +123,7 @@
 }
 
 .btn.-dark{
-    background: $bg-dark;
+    background: $bg-primary;
 
     &.-transparent{
         background: transparent;
@@ -135,6 +133,11 @@
             background: $bg-dark;
         }
     }  
+}
+
+.btn.-white{
+    background: $bg-white;
+    color: $text-primary;
 }
 
 .btn.-remove{

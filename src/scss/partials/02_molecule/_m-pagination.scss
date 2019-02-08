@@ -8,11 +8,12 @@
 }
 .m-pagination__item{
     padding: 5px;
+
     &::before{
         content: none;
     }
     &.-active .m-pagination__link{
-        background: $bg-white;
+        background: $bg-light;
         color: $text-primary;
     }
     &.-disabled .m-pagination__link{
@@ -34,7 +35,7 @@
     align-items: center;
 
     &:hover, &:active, &:focus{
-        background: $bg-white;
+        background: $bg-light;
         color: $text-brand;
     }
 }

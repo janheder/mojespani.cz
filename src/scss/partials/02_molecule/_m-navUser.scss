@@ -1,5 +1,5 @@
 .m-navUser{
-    background: $bg-primary;
+    background: $bg-white;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -11,12 +11,13 @@
     cursor: pointer;
 
     &:hover, &:active, &:focus{
-        background: $bg-dark;
+        background: transparent;
         text-decoration: none;
     }
     &[aria-expanded="true"]{
-        background: $bg-dark;
+        background: transparent;
         text-decoration: none;
+        box-shadow: $box-shadow-primary;
     }
 }
 .m-navUser__icon{
@@ -32,10 +33,13 @@
     height: 100%;
 }
 .m-navUser__text{
-    @include f-14-white-regular;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1;
+    color: $text-medium;
 }
 .m-navUser__title{
-    @include f-16-white-medium;
+    @include f-16-primary-semibold;
     max-width: 160px;
     overflow: hidden; 
     text-overflow: ellipsis;

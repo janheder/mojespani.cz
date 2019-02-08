@@ -3,13 +3,13 @@
 /* ========================================================================== */
 
 .m-productCell{
-    padding: 10px;
+    padding: 0px;
     z-index: 2;
     position: relative;
     width: 100%;
 }
 .m-productCell__link{
-    padding: 20px;
+    padding: 0px 0px 20px 0px;
     z-index: 2;
     position: relative;
     background: $bg-white;
@@ -22,11 +22,12 @@
     transition: 0.3s ease all;
     height: 100%;
     border-radius: $border-radius-primary;
+    border-bottom: 1px solid $border-grey;
 
     &:hover, &:active, &:focus{
         z-index: 3;
         text-decoration: none;
-        box-shadow: $box-shadow-primary;
+        box-shadow: none;
     }
 }
 .m-productCell__top{
@@ -55,15 +56,15 @@
     max-height: 100%;
 }
 .m-productCell__title{
-    @include f-16-primary-medium;
-    text-align: center;
+    @include f-16-primary-regular;
+    text-align: left;
     margin: 0;
-    padding: 2rem 0;
+    padding: 1rem 0 1.5rem 0;
 }
 .m-productCell__tags{
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: 10px;
+    left: 0px;
     z-index: 1;
 }
 .m-productCell__tagSingle{
@@ -85,8 +86,8 @@
 }
 .m-productCell__price{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     padding-right: 10px;
@@ -94,13 +95,14 @@
 }
 .m-productCell__priceOld{
     text-decoration: line-through;
-    @include f-14-medium-regular;
-    margin-right: 5px;
+    @include f-14-semibold-regular;
+    margin-right: 10px;
     line-height: 1;
 }
 .m-productCell__priceMain{
-    @include f-20-primary-medium;
+    @include f-20-primary-semibold;
     color: $text-red;
+    line-height: 1;
 }
 .m-productCell__delivery{
     flex-grow: 1;
@@ -109,8 +111,9 @@
 .m-productCell__deliveryText{
     margin: 0;
     color: $text-green;
-    font-weight: 500;
-    text-align: right;
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.3rem;
 }
 
 .m-productCell__hover{
@@ -137,7 +140,7 @@
     }
 }
 .m-productCell__text{
-    @include f-14-dark-medium;
+    @include f-14-dark-semibold;
     margin: 0;
     margin-bottom: 0.5rem;
 }
@@ -148,7 +151,9 @@
 
 
 @media screen and (max-width:500px){
-
+     .m-productCell{
+        padding: 0px;
+    }
 }
 
 /* ========================================================================== */

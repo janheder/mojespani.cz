@@ -17,7 +17,7 @@
 }
 .m-newsSingle__top{
     position: relative;
-    min-height: 240px;
+    min-height: 300px;
     width: 100%;
     background: $bg-light;
     overflow: hidden;
@@ -40,16 +40,18 @@
     align-items: center;
 }
 .m-newsSingle__date{
-    @include f-14-white-medium;
+    @include f-14-dark-regular;
+    font-size: 13px;
+    color: $text-medium;
 }
 .m-newsSingle__bottom{
     padding: 1.5rem 0;
     background: transparent;
 }
 .m-newsSingle__title{
-    @include f-18-primary-medium;
-    white-space: nowrap;
+    @include f-16-primary-regular;
+    height: 4.5rem;
     overflow: hidden;
-    text-overflow: ellipsis;  
     margin: 0;
+
 }

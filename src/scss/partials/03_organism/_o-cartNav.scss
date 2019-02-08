@@ -19,11 +19,11 @@
     z-index: 1;
 }
 .o-cartNav__title{
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
     margin-bottom: 10px;
 }
 .o-cartNav__number{
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
     position: absolute;
     bottom: 0;
     left: 50%;

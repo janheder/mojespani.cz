@@ -19,7 +19,7 @@
     padding-bottom: 5px;
 }
 .m-cartBarResponsive__price{
-    @include f-18-primary-medium;
+    @include f-18-primary-semibold;
     color: $text-red;
     margin: 0;
     line-height: 1;

@@ -7,6 +7,19 @@
     justify-content: center;
     align-items: center;
     border: 0;
+    position: relative;
+    z-index: 1;
+
+    &::after{
+        content: "";
+        height: 1px;
+        width: 100%;
+        background: $bg-grey;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: -1;
+    }
 }
 .m-tabsNav__link{
     background: transparent;
@@ -17,16 +30,20 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    @include f-16-medium-medium;
+    @include f-16-semibold-regular;
+    border-bottom: 1px solid transparent;
 
     &:hover, &:active, &:focus{
         text-decoration: none;
-        background: $bg-light;
+        background: transparent;
+        color: $text-primary;
+        border-bottom: 1px solid $border-primary;
     }
 }
 .m-tabsNav__link.active{
-    background: $bg-light;
-    color: $text-primary;
+    background: transparent;
+    color: $text-brand;
+    border-bottom: 1px solid $border-brand;
 }
 
 
@@ -34,8 +51,12 @@
 
 
 .m-tabsContent{
-    background: $bg-light;
-    padding: 4rem 0;
+    background: $bg-white;
+    padding: 2rem 0;
+
+    & .container{
+        padding: 10px;
+    }
 }
 .m-tabsContent__btnWrap{
     text-align: center;
@@ -50,7 +71,7 @@
     justify-content: center;
     border-top: 2px solid $border-white;
     background: $bg-light;
-    @include f-14-primary-medium;
+    @include f-14-primary-semibold;
 }
 .m-tabsContent__collapse{
     
@@ -63,7 +84,19 @@
 
 @media screen and (max-width:991px){
     .m-tabsContent{
-        padding: 7px 10px;
+        padding: 10px 20px;
+        & .container{
+            padding: 0;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .m-tabsContent{
+        padding: 10px 0px;
+
+        & .container{
+            padding: 0;
+        }
     }
 }
 @media screen and (max-width:500px){
@@ -82,7 +115,7 @@
         opacity: 1 !important;
     }
     .m-tabsContent__collapse .container{
-        padding: 5px 10px;
+        padding: 10px 0px;
         border-top: 2px solid $border-white;
     }
 }

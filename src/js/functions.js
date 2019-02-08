@@ -95,9 +95,9 @@ if (styletotest in document.body.style){
 else {
     $('.b-bgCover__wrap').each(function () {
         var $container = $(this),
-        imgUrl = $container.find('img').attr('src');
+        imgUrl = $container.find('img.b-bgCover__img').attr('src');
 
-        if(imgUrl==undefined){imgUrl = $container.find('img').attr('srcset');}
+        if(imgUrl==undefined){imgUrl = $container.find('img.b-bgCover__img').attr('srcset');}
 
         if (imgUrl) {
             $(this).css('backgroundImage', 'url(' + imgUrl + ')');
@@ -535,31 +535,41 @@ function startDictation() {
 // SWIPER SETUP
 // =============================================================================
 
-var carousel_main = new Swiper('.m-productCarousel__content', {
-    lazy: true,
-    autoplay: false,
-    spaceBetween: 0,
-    grabCursor: true,
-    slidesPerView: 4,
-    zoom: false,
-    loop: false,
-    pagination: false,
-    navigation: {
-        nextEl: '.m-productCarousel__swiperButton.-next',
-        prevEl: '.m-productCarousel__swiperButton.-prev',
-    },
-    breakpoints: {
-        991: {
-            slidesPerView: 3
+$('.m-productCarousel').each(function(index, element){
+    $(this).find(".m-productCarousel__content").addClass('s'+index);
+    $(this).find(".m-productCarousel__swiperButton.-next").addClass('btn'+index);
+    $(this).find(".m-productCarousel__swiperButton.-prev").addClass('btn'+index);
+    var carousel_main = new Swiper('.s'+index, {
+        lazy: true,
+        autoplay: false,
+        spaceBetween: 20,
+        grabCursor: true,
+        slidesPerView: 4,
+        zoom: false,
+        loop: false,
+        pagination: false,
+        observer: true,
+        observeParents: true,
+        navigation: {
+            nextEl: '.m-productCarousel__swiperButton.-next.btn'+index,
+            prevEl: '.m-productCarousel__swiperButton.-prev.btn'+index,
         },
-        700: {
-            slidesPerView: 2
-        },
-        400: {
-            slidesPerView: 1
+        breakpoints: {
+            991: {
+                slidesPerView: 3
+            },
+            700: {
+                slidesPerView: 2
+            },
+            500: {
+                spaceBetween: 10,
+                slidesPerView: 2
+            }
         }
-    }
+    });
 });
+
+
 
 // =============================================================================
 // BOTTOM NAV SETUP

@@ -57,13 +57,13 @@
     display: block;
 }
 .m-productVariation__title{
-    @include f-14-dark-medium;
+    @include f-14-dark-semibold;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 .m-productVariation__cta, .m-productVariation__ctaActive{
-    @include f-14-white-medium;
+    @include f-14-white-semibold;
     background: $bg-dark;
     width: 100%;
     position: absolute;

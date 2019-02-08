@@ -1,5 +1,5 @@
 .m-navCart{
-    background: $bg-dark;
+    background: transparent;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -7,21 +7,41 @@
     align-items: center;
     transition: 0.2s ease all;
     cursor: pointer;
+    padding: 0;
+}
+.m-navCart__toggle{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+.m-navCart__desktopLink{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 
     &:hover, &:active, &:focus{
         text-decoration: none;
-        background: $bg-brand;
+        background: transparent;
 
-        .m-navCart__icoNumber{
-            color: $text-brand;
-            border: 2px solid $border-brand;
+        & + .m-navCart__toggle .m-navCart__collapse{
+            display: block !important;
         }
+    }
+}
+.m-navCart__collapse{
+    &:hover, &:active, &:focus{
+        display: block !important;
     }
 }
 .m-navCart__iconWrap{
     position: relative;
-    padding: 0 3rem; 
-    background: rgba(0,0,0,0.1);
+    padding: 0rem; 
+    background: transparent;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -34,13 +54,12 @@
     position: relative;
 }
 .m-navCart__icoNumber{
-    @include f-12-dark-medium;
+    @include f-12-dark-regular;
     line-height: 1;
-    background: $bg-white;
+    background: $bg-brand;
     border-radius: 50%;
-    height: 22px;
-    width: 22px;
-    border: 2px solid $border-dark;
+    height: 18px;
+    width: 18px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -48,7 +67,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transform: translateX(50%) translateY(30%);
+    transform: translateX(40%) translateY(20%);
     transition: 0.2s ease all;
 }
 .m-navCart__info{
@@ -56,31 +75,31 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 3rem;
     height: 100%;
+    padding-left: 15px;
 }
 .m-navCart__text{
-    @include f-14-white-regular;
+    font-size: 1.3rem;
+    color: $text-medium;
+    font-weight: 400;
+    line-height: 1.25;
 }
 .m-navCart__title{
-    @include f-16-white-medium;
+    font-size: 1.6rem;
+    color: $text-brand;
+    font-weight: 600;
+    line-height: 1.25;
 }
 
 .m-navCart.-active{
-    background: $bg-brand;
+    background: transparent;
 
     .m-navCart__icoNumber{
-        color: $text-brand;
-        border: 2px solid $border-brand;
+        color: $text-white;
     }
     &:hover, &:active, &:focus{
         text-decoration: none;
-        background: $bg-brand-dark;
-
-        .m-navCart__icoNumber{
-            color: $text-brand-dark;
-            border: 2px solid $border-brand-dark;
-        }
+        background: transparent;
     }
 }
 
@@ -114,15 +133,15 @@
     padding-left: 10px;
 }
 .m-navCart__collapseName{
-    @include f-14-primary-medium;
+    @include f-14-primary-semibold;
     line-height: 1.25;
 }
 .m-navCart__collapsePrice{
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
     color: $text-red;
 }
 .m-navCart__collapseStock{
-    @include f-14-primary-medium;
+    @include f-14-primary-semibold;
     color: $text-green; 
 }
 .m-navCart__collapseOverview{
@@ -136,19 +155,19 @@
     flex-direction: column;
 }
 .m-navCart__collapseTitle{
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
 }
 .m-navCart__collapseText{
     @include f-12-primary-regular;
 }
 .m-navCart__collapseSum{
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
     color: $text-red;
     text-align: right;
     flex-grow: 1;
 }
 .m-navCart__collapseShipping{
-    @include f-14-primary-medium;
+    @include f-14-primary-semibold;
     background: transparent;
     height: 60px; 
     display: flex;
@@ -180,12 +199,20 @@
     align-items: center;
 
 }
-
+@media screen and (min-width:992px){
+    .m-navCart{
+        padding: 0 3rem;
+        position: relative;
+    }
+}
 
 @media screen and (max-width:991px){
+    .m-navCart__desktopLink{
+        display: none;
+    }
     .m-navCart__iconWrap {
         padding: 0;
-        width: 56px;
+        width: 50px;
         background: transparent;
     }
     .m-navCart__info{

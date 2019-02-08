@@ -8,10 +8,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-48-primary-medium() {
+@mixin f-48-primary-semibold() {
   font-size: 4.8rem;
   color: $text-primary;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -21,23 +21,23 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-48-dark-medium() {
+@mixin f-48-dark-semibold() {
   font-size: 4.8rem;
   color: $text-dark;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
-@mixin f-48-medium-regular() {
+@mixin f-48-semibold-regular() {
   font-size: 4.8rem;
   color: $text-medium;
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-48-medium-medium() {
+@mixin f-48-semibold-semibold() {
   font-size: 4.8rem;
   color: $text-medium;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -47,10 +47,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-48-white-medium() {
+@mixin f-48-white-semibold() {
   font-size: 4.8rem;
   color: $text-white;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -64,10 +64,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-36-primary-medium() {
+@mixin f-36-primary-semibold() {
   font-size: 3.6rem;
   color: $text-primary;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -77,23 +77,23 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-36-dark-medium() {
+@mixin f-36-dark-semibold() {
   font-size: 3.6rem;
   color: $text-dark;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
-@mixin f-36-medium-regular() {
+@mixin f-36-semibold-regular() {
   font-size: 3.6rem;
   color: $text-medium;
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-36-medium-medium() {
+@mixin f-36-semibold-semibold() {
   font-size: 3.6rem;
   color: $text-medium;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -103,10 +103,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-36-white-medium() {
+@mixin f-36-white-semibold() {
   font-size: 3.6rem;
   color: $text-white;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -120,10 +120,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-30-primary-medium() {
+@mixin f-30-primary-semibold() {
   font-size: 3rem;
   color: $text-primary;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -133,23 +133,23 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-30-dark-medium() {
+@mixin f-30-dark-semibold() {
   font-size: 3rem;
   color: $text-dark;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
-@mixin f-30-medium-regular() {
+@mixin f-30-semibold-regular() {
   font-size: 3rem;
   color: $text-medium;
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-30-medium-medium() {
+@mixin f-30-semibold-semibold() {
   font-size: 3rem;
   color: $text-medium;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -159,10 +159,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-30-white-medium() {
+@mixin f-30-white-semibold() {
   font-size: 3rem;
   color: $text-white;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -176,10 +176,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-24-primary-medium() {
+@mixin f-24-primary-semibold() {
   font-size: 2.4rem;
   color: $text-primary;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -189,23 +189,23 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-24-dark-medium() {
+@mixin f-24-dark-semibold() {
   font-size: 2.4rem;
   color: $text-dark;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
-@mixin f-24-medium-regular() {
+@mixin f-24-semibold-regular() {
   font-size: 2.4rem;
   color: $text-medium;
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-24-medium-medium() {
+@mixin f-24-semibold-semibold() {
   font-size: 2.4rem;
   color: $text-medium;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -215,10 +215,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-24-white-medium() {
+@mixin f-24-white-semibold() {
   font-size: 2.4rem;
   color: $text-white;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -232,10 +232,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-20-primary-medium() {
+@mixin f-20-primary-semibold() {
   font-size: 2rem;
   color: $text-primary;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -245,23 +245,23 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-20-dark-medium() {
+@mixin f-20-dark-semibold() {
   font-size: 2rem;
   color: $text-dark;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
-@mixin f-20-medium-regular() {
+@mixin f-20-semibold-regular() {
   font-size: 2rem;
   color: $text-medium;
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-20-medium-medium() {
+@mixin f-20-semibold-semibold() {
   font-size: 2rem;
   color: $text-medium;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -271,10 +271,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-20-white-medium() {
+@mixin f-20-white-semibold() {
   font-size: 2rem;
   color: $text-white;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -288,10 +288,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-18-primary-medium() {
+@mixin f-18-primary-semibold() {
   font-size: 1.8rem;
   color: $text-primary;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -301,23 +301,23 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-18-dark-medium() {
+@mixin f-18-dark-semibold() {
   font-size: 1.8rem;
   color: $text-dark;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
-@mixin f-18-medium-regular() {
+@mixin f-18-semibold-regular() {
   font-size: 1.8rem;
   color: $text-medium;
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-18-medium-medium() {
+@mixin f-18-semibold-semibold() {
   font-size: 1.8rem;
   color: $text-medium;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -327,10 +327,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-18-white-medium() {
+@mixin f-18-white-semibold() {
   font-size: 1.8rem;
   color: $text-white;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -344,10 +344,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-16-primary-medium() {
+@mixin f-16-primary-semibold() {
   font-size: 1.6rem;
   color: $text-primary;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -357,23 +357,23 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-16-dark-medium() {
+@mixin f-16-dark-semibold() {
   font-size: 1.6rem;
   color: $text-dark;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
-@mixin f-16-medium-regular() {
+@mixin f-16-semibold-regular() {
   font-size: 1.6rem;
   color: $text-medium;
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-16-medium-medium() {
+@mixin f-16-semibold-semibold() {
   font-size: 1.6rem;
   color: $text-medium;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -383,10 +383,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-16-white-medium() {
+@mixin f-16-white-semibold() {
   font-size: 1.6rem;
   color: $text-white;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -400,10 +400,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-14-primary-medium() {
+@mixin f-14-primary-semibold() {
   font-size: 1.4rem;
   color: $text-primary;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -413,23 +413,23 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-14-dark-medium() {
+@mixin f-14-dark-semibold() {
   font-size: 1.4rem;
   color: $text-dark;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
-@mixin f-14-medium-regular() {
+@mixin f-14-semibold-regular() {
   font-size: 1.4rem;
   color: $text-medium;
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-14-medium-medium() {
+@mixin f-14-semibold-semibold() {
   font-size: 1.4rem;
   color: $text-medium;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -439,10 +439,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-14-white-medium() {
+@mixin f-14-white-semibold() {
   font-size: 1.4rem;
   color: $text-white;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -456,10 +456,10 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-12-primary-medium() {
+@mixin f-12-primary-semibold() {
   font-size: 1.2rem;
   color: $text-primary;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -469,23 +469,23 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-12-dark-medium() {
+@mixin f-12-dark-semibold() {
   font-size: 1.2rem;
   color: $text-dark;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
-@mixin f-12-medium-regular() {
+@mixin f-12-semibold-regular() {
   font-size: 1.2rem;
   color: $text-medium;
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-12-medium-medium() {
+@mixin f-12-semibold-semibold() {
   font-size: 1.2rem;
   color: $text-medium;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -495,9 +495,9 @@
   font-weight: 400;
   line-height: 1.5;
 }
-@mixin f-12-white-medium() {
+@mixin f-12-white-semibold() {
   font-size: 1.2rem;
   color: $text-white;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }

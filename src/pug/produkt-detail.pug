@@ -3,15 +3,18 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
-        include partials/_navMain.pug
-        include partials/_navProducts.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
+
         include partials/_modal-add-to-cart.pug
         include partials/_modal-contact.pug
         include partials/_breadcrumb.pug
+
         section.o-productDetail
             .container
                 .row
-                    .col-12.col-lg-5.o-productDetail__col
+                    .col-12.col-lg-7.o-productDetail__col
                         .o-productDetail__carousel.m-productDetailCarousel
 
                             .m-productDetailCarousel__tags
@@ -37,7 +40,7 @@ html(lang=lang)
                                                     a.m-productDetailCarousel__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
                                                         img.swiper-lazy.m-productDetailCarousel__img(data-src=URLbase+"img/product-thumb-large.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
                                                         .swiper-lazy-preloader.m-productDetailCarousel__preloader
-                                                        figcaption.m-productDetailCarousel__figcaption(itemprop="caption description") Popis obrázku 1
+                                                    figcaption.m-productDetailCarousel__figcaption(itemprop="caption description") Popis obrázku 1
 
                                     .swiper-pagination.swiper-pagination-white.m-productDetailCarousel__swiperNav
                                     .swiper-button-prev.m-productDetailCarousel__swiperButton.-prev
@@ -55,44 +58,33 @@ html(lang=lang)
                                                 figure.m-productDetailThumbs__figure
                                                     img.swiper-lazy.m-productDetailThumbs__img(data-src=URLbase+"img/product-thumb-small.jpg" alt="#")
                                                     .swiper-lazy-preloader.m-productDetailThumbs__preloader
-                                                    figcaption.m-productDetailThumbs__figcaption(itemprop="caption description") Popis obrázku 1
+                                                figcaption.m-productDetailThumbs__figcaption(itemprop="caption description") Popis obrázku 1
 
 
-
-                        .o-productDetail__info.m-productDetailInfo
-                            h5.m-productDetailInfo__title Máte dotaz ohledně tohoto produktu?
-                            .m-productDetailInfo__wrap
-                                button.btn.-light.m-productDetailInfo__btn(data-toggle="modal" data-target="#modal-contact") #[span.a-icon.-envelope.m-productDetailInfo__btnIcon] Otevřít formulář
-                                .m-productDetailInfo__phone #[span.a-icon.-phone.m-productDetailInfo__phoneIcon] 606 311 796
-
-
-                    .col-12.col-lg-7.o-productDetail__col
+                    .col-12.col-lg-5.o-productDetail__col
                         .o-productDetail__main.m-productDetailMain
 
                             h1.m-productDetailMain__title Postel Angelika 160/200 cm masiv borovice
 
                             .m-productDetailMain__misc
-                                .m-productDetailMain__rating.m-rating
-                                    .m-rating__stars
-                                        span.a-icon.-star.m-rating__icon
-                                        span.a-icon.-star.m-rating__icon
-                                        span.a-icon.-star.m-rating__icon
-                                        span.a-icon.-star.m-rating__icon
-                                        span.a-icon.-star.-empty.m-rating__icon
-                                    .m-rating__text 70x hodnoceno
-
                                 .m-productDetailMain__social.m-socialShare
                                     .m-socialShare__title Sdílet:
                                     a.m-socialShare__link(href="https://www.facebook.com/share.php?u=[URL]&title=[TITLE]" target="_blank") #[span.a-icon.-facebook.m-socialShare__icon]
                                     a.m-socialShare__link(href="http://twitter.com/home?status=[TITLE]+[URL]" target="_blank") #[span.a-icon.-twitter.m-socialShare__icon]
-                                    a.m-socialShare__link(href="https://plus.google.com/share?url=[URL]" target="_blank") #[span.a-icon.-googlePlus.m-socialShare__icon]
 
                             .m-productDetailMain__tags
                                 span.m-productDetailMain__tagSingle Výrobce: Visby
-                                span.m-productDetailMain__tagSingle Záruka: 24 měsíců
 
-                            p.m-productDetailMain__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. #[a(href="#anchor-product-detail-description") Celý popis produktu]
+
+                            .m-productDetailMain__description
+                                p.m-productDetailMain__descriptionTitle Popis produktu
+                                p.m-productDetailMain__descriptionText Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. #[a(href="#anchor-product-detail-description") Celý popis produktu]
                             
+
+                            .m-productDetailMain__stock 
+                                span.a-icon.-checkCircle.-green.m-productDetailMain__stockIcon
+                                span.m-productDetailMain__stockText Dostupné skladem
+
                             form.m-productDetailMain__form(method="post" name="product_detail_form" id="product_detail_form")
 
                                 .dropdown.m-productDetailMain__sizes.m-selectBox
@@ -111,6 +103,7 @@ html(lang=lang)
                                                     .m-selectBox__priceNew 2 000 Kč
                                                 .m-selectBox__stock Dostupné skladem
 
+
                                         - for (var i=0; i<8; i++)
                                             
                                             label.m-selectBox__label
@@ -120,49 +113,17 @@ html(lang=lang)
                                                     .m-selectBox__price 
                                                         .m-selectBox__priceOld 9 000 Kč
                                                         .m-selectBox__priceNew 5 000 Kč
-                                                    .m-selectBox__stock 21 dnů
+                                                    .m-selectBox__stock 21 dní
 
 
 
-
-                                .m-productDetailMain__variations.m-productVariation
-                                    .swiper-container-horizontal.m-productVariation__content
-                                        .swiper-wrapper.m-productVariation__wrap
-
-                                            .swiper-slide.m-productVariation__slide
-                                                label.m-productVariation__label
-                                                    input.m-productVariation__input(type="radio" name="productVariation" id="productVariationId" required checked)
-                                                    .m-productVariation__paddingWrap
-                                                        figure.m-productVariation__figure
-                                                            img.swiper-lazy.m-productVariation__img(data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
-                                                            .swiper-lazy-preloader.m-productVariation__preloader
-                                                    .m-productVariation__title grey flex
-                                                    .m-productVariation__cta Zvolit variantu
-                                                    .m-productVariation__ctaActive Vybráno
-
-                                            - for (var i=0; i<8; i++)
-                                                .swiper-slide.m-productVariation__slide
-                                                    label.m-productVariation__label
-                                                        input.m-productVariation__input(type="radio" name="productVariation" id="productVariationId" required)
-                                                        .m-productVariation__paddingWrap
-                                                            figure.m-productVariation__figure
-                                                                img.swiper-lazy.m-productVariation__img(data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
-                                                                .swiper-lazy-preloader.m-productVariation__preloader
-                                                        .m-productVariation__title grey flex
-                                                        .m-productVariation__cta Zvolit variantu
-                                                        .m-productVariation__ctaActive Vybráno
-
-                                        .swiper-button-prev.m-productVariation__swiperButton.-prev
-                                        .swiper-button-next.m-productVariation__swiperButton.-next
-
+                                .m-productDetailMain__priceWrap
+                                    span.m-productDetailMain__priceOld 22 999 Kč
+                                    h2.m-productDetailMain__priceMain 18 546 Kč
+                                    span.m-productDetailMain__priceDPH 16 800 Kč bez DPH
 
 
                                 .m-productDetailMain__cta
-
-                                    .m-productDetailMain__priceWrap
-                                        span.m-productDetailMain__priceOld 22 999 Kč
-                                        h2.m-productDetailMain__priceMain 18 546 Kč
-                                        span.m-productDetailMain__priceDPH 16 800 Kč bez DPH
 
                                     .m-productDetailMain__qty
                                         .m-numberStepper
@@ -175,10 +136,8 @@ html(lang=lang)
                                     button.btn.m-productDetailMain__button(type="submit" name="buy-button") #[span.a-icon.-cart.-white.m-productDetailMain__icon] Do košíku
 
                                 .m-productDetailMain__info
-                                    .m-productDetailMain__stock 
-                                        span.a-icon.-checkCircle.-green.m-productDetailMain__stockIcon
-                                        span.m-productDetailMain__stockText Dostupné skladem
                                     span.m-productDetailMain__id Katalogové číslo: Angeli160
+                                    span.m-productDetailMain__id Záruka: 24 měsíců
 
 
         section.o-productDescription.o-tabs(id="anchor-product-detail-description")
@@ -261,15 +220,15 @@ html(lang=lang)
                         .swiper-wrapper.m-productCarousel__wrap
 
                             .swiper-slide.m-productCarousel__slide
-                                include partials/_single-product-cell-small.pug
+                                include partials/_single-product-cell.pug
                             .swiper-slide.m-productCarousel__slide
-                                include partials/_single-product-cell-small.pug
+                                include partials/_single-product-cell.pug
                             .swiper-slide.m-productCarousel__slide
-                                include partials/_single-product-cell-small.pug
+                                include partials/_single-product-cell.pug
                             .swiper-slide.m-productCarousel__slide
-                                include partials/_single-product-cell-small.pug
+                                include partials/_single-product-cell.pug
                             .swiper-slide.m-productCarousel__slide
-                                include partials/_single-product-cell-small.pug
+                                include partials/_single-product-cell.pug
                         
                     .swiper-button-prev.m-productCarousel__swiperButton.-prev
                     .swiper-button-next.m-productCarousel__swiperButton.-next
@@ -324,7 +283,7 @@ html(lang=lang)
                 spaceBetween: 10,
                 lazy: true,
                 centeredSlides: true,
-                slidesPerView: '5',
+                slidesPerView: '6',
                 touchRatio: 0.2,
                 slideToClickedSlide: true,
             });

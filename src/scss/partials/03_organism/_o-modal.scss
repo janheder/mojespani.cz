@@ -27,7 +27,7 @@
     border-top-right-radius: $border-radius-primary;
 }
 .o-modal__title{
-    @include f-24-primary-medium;
+    @include f-24-primary-semibold;
 }
 .modal-header .close{
     padding: 0;

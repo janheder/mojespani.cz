@@ -15,7 +15,7 @@
     padding-bottom: 3px;
 }
 .m-cartPriceOverview__price{
-    @include f-24-primary-medium;
+    @include f-24-primary-semibold;
     color: $text-red;
     margin: 0;
 }

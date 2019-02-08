@@ -14,7 +14,7 @@
     margin-right: 10px;
 }
 .m-cartDeliveryOverview__title{
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
     margin: 0;
     margin-right: 2rem;
     flex-grow: 1;
@@ -22,7 +22,7 @@
     display: flex;
 }
 .m-cartDeliveryOverview__price{
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
     color: $text-red;
     margin: 0;
     flex-shrink: 0;

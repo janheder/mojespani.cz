@@ -1,11 +1,11 @@
 main{
-    background: $bg-light;
+    background: $bg-white;
     padding:4rem 0;
 }
 
 @media screen and (max-width:768px){
     main{
-        background: $bg-light;
+        background: $bg-white;
         padding: 20px 0;
     }
 }

@@ -43,10 +43,10 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    @include f-14-white-medium;
+    @include f-14-white-semibold;
 }
 .m-cartOverview__productNumber{
-    @include f-14-dark-medium;
+    @include f-14-dark-semibold;
 }
 
 .m-cartOverview__plus{
@@ -103,10 +103,10 @@
     @include f-12-dark-regular;
 }
 .m-cartOverview__shippingTitle, .m-cartOverview__paymentTitle{
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
 }
 .m-cartOverview__shippingNumber, .m-cartOverview__paymentNumber{
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
     color: $text-red;
     margin-left: 10px;
 }
@@ -117,7 +117,7 @@
     padding: 15px 20px;
 }
 .m-cartOverview__priceTitle{
-    @include f-20-primary-medium;
+    @include f-20-primary-semibold;
     color: $text-red;
     text-align: right;
 }

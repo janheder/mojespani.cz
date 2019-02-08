@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
 }
 .m-registerBanner__title{
-    @include f-36-white-medium;
+    @include f-36-white-semibold;
     padding: 4rem 0;
     position: relative;
     margin-bottom: 8rem;
@@ -24,7 +24,7 @@
     }
 }
 .m-registerBanner__subtitle{
-    @include f-16-white-medium;
+    @include f-16-white-semibold;
 }
 .m-registerBanner__list{
     padding: 0;

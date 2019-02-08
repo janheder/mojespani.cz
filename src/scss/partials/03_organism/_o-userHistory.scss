@@ -3,7 +3,7 @@
     background: $bg-white;
 }
 .o-userHistory__title{
-    @include f-24-primary-medium;   
+    @include f-24-primary-semibold;   
     text-align: center;
     margin: 0;
     padding: 2rem 0 2rem 0;
@@ -21,17 +21,17 @@
     padding: 0;
 }
 .o-userHistory__id{
-    @include f-14-medium-medium;   
+    @include f-14-semibold-semibold;   
 }
 .o-userHistory__date{
     @include f-14-primary-regular;   
 }
 .o-userHistory__price{
-    @include f-14-primary-medium; 
+    @include f-14-primary-semibold; 
     color: $text-red;
 }
 .o-userHistory__status{
-    @include f-14-primary-medium; 
+    @include f-14-primary-semibold; 
     padding: 5px 15px;
     border-radius: $border-radius-primary;
     position: relative;

@@ -37,7 +37,7 @@ input{
 .o-form__collapseToggler{
     width: 100%;
     margin-bottom: 0px;
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
     display: none;
     flex-direction: row;
     justify-content: space-between;
@@ -63,7 +63,7 @@ input{
   
 }
 .o-form__title{
-    @include f-24-primary-medium;
+    @include f-24-primary-semibold;
     text-align: center;
     margin: 0;
     padding: 2rem 0 2rem 0;
@@ -75,7 +75,7 @@ input{
 }
 .o-form__link{
     display: block;
-    @include f-14-dark-medium;
+    @include f-14-dark-semibold;
     text-align: center;
     margin-top: 2rem; 
 
@@ -254,7 +254,7 @@ input{
 }
 .m-formGroup__input{
     height: 5.4rem;
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
     padding: 0 2rem;
     border: 0;
     background: $bg-light;

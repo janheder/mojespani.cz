@@ -12,14 +12,14 @@
     margin-bottom: 3rem;
 }
 .m-userSidebar__title{
-    @include f-18-white-medium;
+    @include f-18-white-semibold;
 }
 .m-userSidebar__bottom{
     padding: 10px 0;
 }
 .m-userSidebar__link{
     padding: 0 2rem;
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
     height: 6rem;
     display: flex;
     flex-direction: row;

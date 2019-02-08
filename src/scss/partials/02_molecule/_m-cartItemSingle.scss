@@ -51,11 +51,11 @@
 }
 .m-cartItemSingle__name{
     margin-bottom: 0rem;
-    @include f-16-primary-medium;
+    @include f-16-primary-semibold;
 }
 .m-cartItemSingle__tags{
     margin-bottom: 1rem;
-	@include f-14-medium-medium;
+	@include f-14-semibold-semibold;
 	
 	span:nth-child(2){
 		border-left: 1px solid $border-grey;
@@ -66,7 +66,7 @@
 .m-cartItemSingle__stock{
 	color: $text-green;
 	margin: 0;
-    @include f-14-primary-medium;
+    @include f-14-primary-semibold;
     color: $text-green;
 }	
 .m-cartItemSingle__inner{

@@ -3,8 +3,8 @@
 }
 .m-productCarousel__content{
     overflow: hidden;
-    padding: 10px;
-    background: $bg-light;
+    padding: 0px;
+    background: transparent;
     border-radius: $border-radius-primary;
 }
 .m-productCarousel__wrap{
@@ -35,6 +35,10 @@
 
     &.-prev{
         transform: rotate(180deg);
+    }
+    &.swiper-button-disabled{
+        pointer-events: auto;
+        opacity: 0;
     }
 }
 
