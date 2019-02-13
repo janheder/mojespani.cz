@@ -3,10 +3,19 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
-        include partials/_navMain.pug
-        include partials/_navProducts.pug
-                
-        include partials/_breadcrumb.pug
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
+        include partials/_modal-question.pug
+
+        section.o-pageHeading
+            include partials/_breadcrumb-transparent.pug
+            .container.o-pageHeading__container
+                h1.o-pageHeading__title Přihlášení
+                p.o-pageHeading__text Jako registrovaný uživatel získává slevu ve výši 1% na veškeré zboží, které není aktuálně ve slevě.
+
+
         main
             .container
                 .row
@@ -17,9 +26,6 @@ html(lang=lang)
                         form.o-form(method="post" action="" class="login-form" name="login_form")
 
                             .m-alert.-danger Zadali jste špatné údaje
-                            
-                            h2.o-form__title Přihlášení
-                            p.o-form__text Jako registrovaný uživatel získává slevu ve výši 1% na veškeré zboží, které není aktuálně ve slevě. 
 
                             .o-form__group.m-formGroup
                                 input.m-formGroup__input(type="email" name="login_form_email" id="login_form_email" autocomplete="email" required placeholder=" ")
@@ -33,9 +39,13 @@ html(lang=lang)
                                 span.m-formGroup__error Neplatné heslo
                                 span.m-formGroup__success
 
-                            button.btn.-secondary.-fullWidth(type="submit" id="login_form_submit") Přihlásit se
+                            .o-form__group.m-formGroup
+                                a.o-form__link.-alignRight(href="#") Obnovit zapomenuté heslo
 
-                            a.o-form__link(href="#") Obnovit zapomenuté heslo
+                            .o-form__group.m-formGroup
+                                button.btn.-fullWidth(type="submit" id="login_form_submit") Přihlásit se #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
+
+                            span.o-form__text Nemáte u nás účet? #[a.o-form__link(href="#") Zaregistrujte se]
 
                     .col-12.col-sm-12.col-md-12.col-lg-3
 

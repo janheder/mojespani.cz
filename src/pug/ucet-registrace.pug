@@ -3,24 +3,23 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
-        include partials/_navMain.pug
-        include partials/_navProducts.pug
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
 
-                
-        include partials/_breadcrumb.pug
+        section.o-pageHeading
+            include partials/_breadcrumb-transparent.pug
+            .container.o-pageHeading__container
+                h1.o-pageHeading__title Registrace
+                p.o-pageHeading__text Jako registrovaný uživatel získáte slevu 1% na veškeré zboží a můžete sledovat průběh vyřízení své objednávky.
         main
             .container
                 .row
-                    .col-12.col-sm-12.col-md-12.col-lg-4
-                        .m-registerBanner   
-                            h2.m-registerBanner__title Registrace
-                            p.m-registerBanner__subtitle Jako registrovaný uživatel získáte
-                            ul.m-registerBanner__list
-                                li.m-registerBanner__point slevu 1% na veškeré zboží 
-                                li.m-registerBanner__point možnost vrácení zboží do 30 dnů od doručení
-                                li.m-registerBanner__point sledování průběhu vyřízení své objednávky
+                    .col-12.col-sm-12.col-md-12.col-lg-1
 
-                    .col-12.col-sm-12.col-md-12.col-lg-8
+
+                    .col-12.col-sm-12.col-md-12.col-lg-10
                         form.o-form.-noMargin(method="post" action="" name="register_form" id="register_form")
 
                             .o-form__divider.m-formDivider Osobní údaje
@@ -87,7 +86,7 @@ html(lang=lang)
 
                                 .col-12.col-md-3
                                     .o-form__group.m-formGroup
-                                        input.m-formGroup__input(type="number" name="register_form_postal_code" id="register_form_postal_code" autocomplete="postal-code" required placeholder=" ")
+                                        input.m-formGroup__input(type="text" name="register_form_postal_code" id="register_form_postal_code" autocomplete="postal-code" required placeholder=" ")
                                         label.m-formGroup__label(for="register_form_postal_code") PSČ
                                         span.m-formGroup__error Neplatné PSČ
                                         span.m-formGroup__success
@@ -158,7 +157,7 @@ html(lang=lang)
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
-                                            input.m-formGroup__input(type="number" name="register_form_billing_postal_code" id="register_form_billing_postal_code" autocomplete="postal-code" placeholder=" ")
+                                            input.m-formGroup__input(type="text" name="register_form_billing_postal_code" id="register_form_billing_postal_code" autocomplete="postal-code" placeholder=" ")
                                             label.m-formGroup__label(for="register_form_billing_postal_code") PSČ
                                             span.m-formGroup__error Neplatné PSČ
                                             span.m-formGroup__success
@@ -237,12 +236,12 @@ html(lang=lang)
                             .o-form__group.m-formGroup.-checkbox
                                 input.m-formGroup__input(type="checkbox" name="register_form_newsletter" id="register_form_newsletter")
                                 span.m-formGroup__checkbox.a-checkbox
-                                label.m-formGroup__label.-small(for="register_form_newsletter") Chci odebírat newsletter a souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem zasílání informací o novinkách a slevách.            
+                                label.m-formGroup__label(for="register_form_newsletter") Chci odebírat newsletter a souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem zasílání informací o novinkách a slevách.            
 
                             .o-form__group.m-formGroup.-checkbox
                                 input.m-formGroup__input(type="checkbox" name="register_form_legal" id="register_form_legal" required)
                                 span.m-formGroup__checkbox.a-checkbox
-                                label.m-formGroup__label.-small(for="register_form_legal") Souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem registrace .            
+                                label.m-formGroup__label(for="register_form_legal") Souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem registrace .            
                 
                             .o-form__group.m-formGroup
                                 input.m-formGroup__input(type="number" name="register_form_antispam" id="register_form_antispam" autocomplete="antispam" required placeholder=" ")
@@ -251,10 +250,10 @@ html(lang=lang)
                                 span.m-formGroup__success
 
                             .m-cartButtons
-                                button.btn.-secondary.-fullWidth(type="submit" id="register_form_submit") Vytvořit účet
+                                button.btn.-fullWidth(type="submit" id="register_form_submit") Vytvořit účet #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
 
 
-
+                    .col-12.col-sm-12.col-md-12.col-lg-1
 
 
         include partials/_footer.pug

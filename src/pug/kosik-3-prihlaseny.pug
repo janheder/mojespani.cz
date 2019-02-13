@@ -3,22 +3,26 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
-        include partials/_navMain.pug
-        
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
         section.o-cartNav
             .container.o-cartNav__container
-                .o-cartNav__single.-complete
-                    .o-cartNav__title Nákupní košík
-                    .o-cartNav__number 1
-                .o-cartNav__single.-complete
-                    .o-cartNav__title Doprava a platba
-                    .o-cartNav__number 2
                 .o-cartNav__single.-active
-                    .o-cartNav__title Osobní údaje
-                    .o-cartNav__number 3
+                    .o-cartNav__number 1
+                    .o-cartNav__title Nákupní košík
+                    
                 .o-cartNav__single
-                    .o-cartNav__title Shrnutí objednávky
+                    .o-cartNav__number 2
+                    .o-cartNav__title Doprava a platba
+                    
+                .o-cartNav__single
+                    .o-cartNav__number 3
+                    .o-cartNav__title Osobní údaje
+                    
+                .o-cartNav__single
                     .o-cartNav__number 4
+                    .o-cartNav__title Shrnutí objednávky
 
 
         section.o-cartNavResponsive

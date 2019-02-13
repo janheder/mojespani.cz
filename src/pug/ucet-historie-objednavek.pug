@@ -3,27 +3,40 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
-        include partials/_navMain.pug
-        include partials/_navProducts.pug
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
         include partials/_modal-history.pug
-        include partials/_breadcrumb.pug
+
+        section.o-pageHeading
+            include partials/_breadcrumb-transparent.pug
+            .container.o-pageHeading__container
+                h1.o-pageHeading__title Uživatelský účet
+
         main
             .container
                 .row
-                    .col-12.col-sm-12.col-md-12.col-lg-4
-                        .m-userSidebar
-                            .m-userSidebar__top
-                                img.m-userSidebar__img(src=URLbase+"img/user-icon.svg" alt="Petr Novák" title="Petr Novák")
-                                .m-userSidebar__title Petr Novák
-                            .m-userSidebar__bottom
-                                a.m-userSidebar__link(href="#") #[span.a-icon.-personalInfo] Změna osobních údajů
-                                a.m-userSidebar__link.-active(href="#") #[span.a-icon.-calendar.-red] Historie objednávek
-                                a.m-userSidebar__link(href="#") #[span.a-icon.-logOut] Odhlásit
+                    .col-12.col-sm-12.col-md-12.col-lg-1
 
 
-                    .col-12.col-sm-12.col-md-12.col-lg-8
+                    .col-12.col-sm-12.col-md-12.col-lg-10
+
+                        nav.o-tabs__nav.m-tabsNav.-paddingBottom
+
+                          
+                            .nav.nav-tabs.m-tabsNav__nav(role="tablist")
+                        
+                                a.m-tabsNav__link(href="#") Změna osobních údajů
+                        
+                                a.m-tabsNav__link.active(href="#") Historie objednávek
+                    
+                                a.m-tabsNav__link(href="#") Odhlásit
+
+
+
                         .o-userHistory
-                            .o-userHistory__title Historie objednávek
+               
                             table.o-userHistory__table
                                 tr.o-userHistory__tr
                                     th.o-userHistory__th Číslo nákupu
@@ -59,6 +72,8 @@ html(lang=lang)
                                     td.o-userHistory__info
                                         span.a-icon.-info(data-toggle="modal" data-target="#modal-history")                 
 
+
+                    .col-12.col-sm-12.col-md-12.col-lg-1
 
         include partials/_footer.pug
 

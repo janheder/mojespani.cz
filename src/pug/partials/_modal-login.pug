@@ -23,8 +23,11 @@
                         label.m-formGroup__label(for="login_form_name") Heslo
                         span.m-formGroup__error Neplatné heslo
                         span.m-formGroup__success
-      
 
-                    button.btn.-fullWidth(type="submit" name="login_form_submit" id="login_form_submit") Přihlásit
-                    a.o-form__link.-alt(href="#") Vytvořit účet
-                    a.o-form__link(href="#") Obnovit zapomenuté heslo
+                    .o-form__group.m-formGroup
+                        a.o-form__link.-alignRight(href="#") Obnovit zapomenuté heslo
+
+                    .o-form__group.m-formGroup
+                        button.btn.-fullWidth(type="submit" name="login_form_submit" id="login_form_submit") Přihlásit
+                    
+                    span.o-form__text Nemáte u nás účet? #[a.o-form__link(href="#") Zaregistrujte se]

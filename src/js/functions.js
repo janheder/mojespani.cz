@@ -381,62 +381,94 @@ $(".m-selectBox .m-selectBox__input").click(function () {
 // CART
 // =============================================================================
 
-if($('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="doprava"]').prop('checked')){ 
+var dopravaInput = '.o-cartDeliveryForm .m-formGroup__input[name="doprava"]';
 
-    var name = $('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="doprava"]:checked').siblings(".m-cartDeliveryItem__top").find(".m-cartDeliveryItem__title").text();
-    $(".m-cartOverview__shippingTitle").text(name);
+if($(dopravaInput).is(':checked')){ 
 
-    var value = $('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="doprava"]:checked').siblings(".m-cartDeliveryItem__bottom").find(".m-cartDeliveryItem__price").text();
+    var name = $(dopravaInput+":checked").siblings(".m-formGroup__label").html();
+    var nameClean= name.substr(0, name.indexOf('<span'));
+    $(".m-cartOverview__shippingTitle").text(nameClean);
+
+    var value = $(dopravaInput+":checked").siblings(".m-formGroup__price").text();
     $(".m-cartOverview__shippingNumber").text(value);
 
 }
 
-$('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="doprava"]').click(function () { 
+$(dopravaInput).click(function () { 
     
-    var name = $('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="doprava"]:checked').siblings(".m-cartDeliveryItem__top").find(".m-cartDeliveryItem__title").text();
-    $(".m-cartOverview__shippingTitle").text(name);
+    var name = $(dopravaInput+":checked").siblings(".m-formGroup__label").html();
+    var nameClean= name.substr(0, name.indexOf('<span'));
+    $(".m-cartOverview__shippingTitle").text(nameClean);
     
-    var value = $('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="doprava"]:checked').siblings(".m-cartDeliveryItem__bottom").find(".m-cartDeliveryItem__price").text();
+    var value = $(dopravaInput+":checked").siblings(".m-formGroup__price").text();
     $(".m-cartOverview__shippingNumber").text(value);
+
 });
 
 
+var platbaInput = '.o-cartDeliveryForm .m-formGroup__input[name="platba"]';
 
-if($('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="platba"]').prop('checked')){ 
+if($(platbaInput).is(':checked')){ 
 
-    var name = $('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="platba"]:checked').siblings(".m-cartDeliveryItem__top").find(".m-cartDeliveryItem__title").text();
-    $(".m-cartOverview__paymentTitle").text(name);
-
-    var value = $('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="platba"]:checked').siblings(".m-cartDeliveryItem__bottom").find(".m-cartDeliveryItem__price").text();
+    var name = $(platbaInput+":checked").siblings(".m-formGroup__label").html();
+    var nameClean= name.substr(0, name.indexOf('<span'));
+    $(".m-cartOverview__paymentTitle").text(nameClean);
+    
+    var value = $(platbaInput+":checked").siblings(".m-formGroup__price").text();
     $(".m-cartOverview__paymentNumber").text(value);
 
 }
 
-$('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="platba"]').click(function () { 
+$(platbaInput).click(function () { 
     
-    var name = $('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="platba"]:checked').siblings(".m-cartDeliveryItem__top").find(".m-cartDeliveryItem__title").text();
-    $(".m-cartOverview__paymentTitle").text(name);
+    var name = $(platbaInput+":checked").siblings(".m-formGroup__label").html();
+    var nameClean= name.substr(0, name.indexOf('<span'));
+    $(".m-cartOverview__paymentTitle").text(nameClean);
     
-    var value = $('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="platba"]:checked').siblings(".m-cartDeliveryItem__bottom").find(".m-cartDeliveryItem__price").text();
+    var value = $(platbaInput+":checked").siblings(".m-formGroup__price").text();
     $(".m-cartOverview__paymentNumber").text(value);
 
 });
 
 
+$.fn.digits = function(){ 
+    return this.each(function(){ 
+        $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") ); 
+    })
+}
 
-var cena = parseInt($(".m-cartOverview__product").data("price"));
-$('.o-cartDeliveryForm .m-cartDeliveryItem__input[name="doprava"], .o-cartDeliveryForm .m-cartDeliveryItem__input[name="platba"]').click(function () { 
-
+$(window).bind("load", function() { 
+    var cena = parseInt($(".m-cartOverview").data("price"));
+    
     var doprava = parseInt($('.m-cartOverview__shippingNumber').text().replace(/[^0-9\.]/g, ''));
     if($.isNumeric(doprava)){
 
     }else{doprava = 0;}
+    
     var platba = parseInt($('.m-cartOverview__paymentNumber').text().replace(/[^0-9\.]/g, ''));
     if($.isNumeric(platba)){
         
     }else{platba = 0;}
     
-    $(".m-cartOverview__priceTitle").text((doprava+platba+cena) + " Kč") ;
+    $(".m-cartOverview__priceTitle").text((doprava+platba+cena) + " Kč").digits(); ;
+
+});
+
+
+$('.o-cartDeliveryForm .m-formGroup__input[name="doprava"], .o-cartDeliveryForm .m-formGroup__input[name="platba"]').click(function () { 
+    var cena = parseInt($(".m-cartOverview").data("price"));
+
+    var doprava = parseInt($('.m-cartOverview__shippingNumber').text().replace(/[^0-9\.]/g, ''));
+    if($.isNumeric(doprava)){
+
+    }else{doprava = 0;}
+
+    var platba = parseInt($('.m-cartOverview__paymentNumber').text().replace(/[^0-9\.]/g, ''));
+    if($.isNumeric(platba)){
+        
+    }else{platba = 0;}
+    
+    $(".m-cartOverview__priceTitle").text((doprava+platba+cena) + " Kč").digits(); ;
 
 });
 

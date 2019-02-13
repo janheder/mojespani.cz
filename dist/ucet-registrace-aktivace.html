@@ -79,7 +79,10 @@
                 <input class="m-formGroup__input" type="password" name="login_form_pass" id="login_form_pass" autocomplete="password" required placeholder=" ">
                 <label class="m-formGroup__label" for="login_form_name">Heslo</label><span class="m-formGroup__error">Neplatné heslo</span><span class="m-formGroup__success"></span>
               </div>
-              <button class="btn -fullWidth" type="submit" name="login_form_submit" id="login_form_submit">Přihlásit</button><a class="o-form__link -alt" href="#">Vytvořit účet</a><a class="o-form__link" href="#">Obnovit zapomenuté heslo</a>
+              <div class="o-form__group m-formGroup"><a class="o-form__link -alignRight" href="#">Obnovit zapomenuté heslo</a></div>
+              <div class="o-form__group m-formGroup">
+                <button class="btn -fullWidth" type="submit" name="login_form_submit" id="login_form_submit">Přihlásit</button>
+              </div><span class="o-form__text">Nemáte u nás účet? <a class="o-form__link" href="#">Zaregistrujte se</a></span>
             </form>
           </div>
         </div>
@@ -226,7 +229,8 @@
                 <input class="m-formGroup__input" type="password" name="login_form_password" id="login_form_password" autocomplete="password" required placeholder=" ">
                 <label class="m-formGroup__label" for="login_form_password">Heslo</label><span class="m-formGroup__error">Neplatné heslo</span><span class="m-formGroup__success"></span>
               </div>
-              <button class="btn -secondary -fullWidth" type="submit" id="login_form_submit">Přihlásit se</button><a class="o-form__link" href="#">Obnovit zapomenuté heslo</a>
+              <div class="o-form__group m-formGroup"><a class="o-form__link -alignRight" href="#">Obnovit zapomenuté heslo</a></div>
+              <button class="btn -fullWidth" type="submit" id="login_form_submit">Přihlásit se <span class="a-btnIcon"><span class="a-icon -cheveron -white"></span></span></button>
             </form>
           </div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-3"></div>

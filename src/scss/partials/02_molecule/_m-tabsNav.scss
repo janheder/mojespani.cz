@@ -1,5 +1,9 @@
 .m-tabsNav{
     background: $bg-white;
+
+    &.-paddingBottom{
+        padding-bottom: 20px;
+    }
 }
 .m-tabsNav__nav{
     display: flex;

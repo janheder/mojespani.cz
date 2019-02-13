@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     transition: 0.3s ease all;
-    margin: 0px 0 10px 0;
+    margin: 0px;
     border-radius: $border-radius-primary;
     flex-wrap: wrap;
 
@@ -18,14 +18,17 @@
 .m-categoryCell__img{
     height: 200px;
 }
-@media screen and (max-width:500px){
-    .m-categoryCell__img{
-        height: 100px;
-    }
-}
 .m-categoryCell__title{
     @include f-16-primary-regular;
     margin: 2rem 0 1rem 0;
     flex-grow: 1;
     text-align: center;
+}
+@media screen and (max-width:575px){
+    .m-categoryCell__img{
+        height: 90px;
+    }
+    .m-categoryCell__title{
+        margin: 1rem 0 0rem 0;
+    }
 }

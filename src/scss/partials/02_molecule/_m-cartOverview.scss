@@ -1,39 +1,37 @@
 .m-cartOverview{
     background: $bg-white;
-    padding: 10px;  
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-radius: $border-radius-primary;
-    margin: 20px 0;
-}
-.m-cartOverview__product{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 20px;
-}
-.m-cartOverview__productSingle{
+    padding: 0px;  
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: -10px;
+    border-radius: $border-radius-primary;
+    margin: 0px 0;
+}
+.m-cartOverview__title{
+    @include f-18-primary-semibold;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $border-grey;
+    text-align: left;
+    width: 100%;
+    line-height: 1;
+}
+.m-cartOverview__productSingle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid $border-grey;
+    padding-bottom: 2rem;
 }
 .m-cartOverview__productThumb{
     border-radius: 50%;
     height: 60px;
     width: 60px;
-    border: 4px solid $border-white;
     position: relative;
     overflow: hidden;
-
-    &.-more{
-        background: $bg-primary;
-        cursor: pointer;
-    }
+    flex-shrink: 0;
 }
 
 .m-cartOverview__productImg{
@@ -45,65 +43,59 @@
     transform: translateX(-50%) translateY(-50%);
     @include f-14-white-semibold;
 }
+.m-cartOverview__productContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+.m-cartOverview__productTitle{
+    @include f-14-primary-regular;
+    max-height: 42px;
+    overflow: hidden;
+}
+.m-cartOverview__productSub{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 5px;
+}
 .m-cartOverview__productNumber{
     @include f-14-dark-semibold;
 }
-
-.m-cartOverview__plus{
-    position: relative;
+.m-cartOverview__productPrice{
     flex-grow: 1;
-    &::before, &::after{
-        content: "";
-        background: $bg-dark;
-        height: 2px;
-        width: 14px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-    }
-    &::after{
-        height: 14px;
-        width: 2px;
-    }
+    text-align: right;
+    @include f-14-dark-semibold;
+    color: $text-brand;
 }
-.m-cartOverview__equals{
-    position: relative;
-    flex-grow: 1;
 
-    &::before, &::after{
-        content: "";
-        background: $bg-dark;
-        height: 2px;
-        width: 14px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-    }
-    &::before{
-        margin-top: -3px;
-    }
-    &::after{
-        margin-top: 3px;
-    }
-}
+
+
+
 
 .m-cartOverview__shipping, .m-cartOverview__payment{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    width: 100%;
+    padding-top: 2rem;
 }
 .m-cartOverview__shippingWrap, .m-cartOverview__paymentWrap{
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 .m-cartOverview__shippingText, .m-cartOverview__paymentText, .m-cartOverview__priceText{
     @include f-12-dark-regular;
 }
 .m-cartOverview__shippingTitle, .m-cartOverview__paymentTitle{
     @include f-16-primary-semibold;
+    flex-grow: 1;
 }
 .m-cartOverview__shippingNumber, .m-cartOverview__paymentNumber{
     @include f-16-primary-semibold;
@@ -111,15 +103,21 @@
     margin-left: 10px;
 }
 .m-cartOverview__price{
-    background: $bg-light;
-    border-radius: $border-radius-primary;
-    height: 100%;
-    padding: 15px 20px;
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid $border-grey;
+    margin-top: 2rem;
 }
 .m-cartOverview__priceTitle{
     @include f-20-primary-semibold;
     color: $text-red;
     text-align: right;
+    flex-grow: 1;
+    padding-left: 10px;
 }
 
 @media screen and (max-width: 768px){

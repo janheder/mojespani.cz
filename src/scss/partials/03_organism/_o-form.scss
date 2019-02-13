@@ -17,9 +17,9 @@ input{
 }
 
 .o-form{
-    background: $bg-white;
-    padding: 20px;
-    margin: 20px 0;
+    background: transparent;
+    padding: 0px;
+    margin: 20px 0 0 0;
     border-radius: $border-radius-primary;
 
     &.-noMargin{
@@ -32,6 +32,9 @@ input{
         .m-formGroup__success{
             display: none;
         }
+    }
+    &.-paddingRight{
+        padding-right: 4rem;
     }
 }
 .o-form__collapseToggler{
@@ -64,24 +67,30 @@ input{
 }
 .o-form__title{
     @include f-24-primary-semibold;
-    text-align: center;
+    text-align: left;
     margin: 0;
-    padding: 2rem 0 2rem 0;
+    padding: 0;
 }
 .o-form__text{
-    @include f-14-dark-regular;
+    @include f-16-primary-regular;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-top: 0rem;
+    display: block;
 }
 .o-form__link{
     display: block;
-    @include f-14-dark-semibold;
+    @include f-16-dark-regular;
+    display: inline-block;
+    color: $text-brand;
     text-align: center;
-    margin-top: 2rem; 
 
     &.-alt{
         color: $text-brand;
         margin: 2rem;
+    }
+    &.-alignRight{
+        text-align: right;
+        display: block;
     }
 }
 
@@ -103,6 +112,12 @@ input{
     @include f-14-dark-regular;
     border-bottom: 1px solid $border-grey;
     margin: 2rem 0;
+    padding-bottom: 5px;
+}
+@media screen and (max-width:575px){
+    .m-formDivider{
+        margin: 10px 0;
+    }
 }
 
 .m-formGroup{
@@ -131,18 +146,21 @@ input{
             &:checked + .m-formGroup__radiobutton::after, &:checked + .m-formGroup__checkbox::after{
                 opacity: 1;
             }
+            &:checked + .m-formGroup__radiobutton::before{
+                border-color: $border-brand;
+            }
             &:checked + .m-formGroup__checkbox::before{
-                background: $bg-brand-secondary;
+                background: $bg-brand;
                 border: 0;
             }
             &:checked + .m-formGroup__switch::before{
-                background: $bg-brand-secondary;
+                background: $bg-brand;
             }
             &:checked + .m-formGroup__switch::after{
                 right: 0;
                 left: 100%;
                 transform: translateX(-100%);
-                background: $bg-brand-secondary;
+                background: $bg-brand;
             }
         }
         .m-formGroup__label{
@@ -156,9 +174,38 @@ input{
             cursor: pointer;
             padding-bottom: 0;
             opacity: 1;
+
+            &.-bold{
+                font-weight: 600;
+            }
+        }
+        .m-formGroup__text{
+            display: block;
+            position: relative;
+            left: auto;
+            color: $text-medium;
+            font-size: 1.4rem;
+            z-index: 3;
+            padding-bottom: 0;
+            opacity: 1;
+            font-weight: 400;
+        }
+        .m-formGroup__price{
+            position: relative;
+            top: 0;
+            left: auto;
+            padding-left: 15px;
+            color: $text-brand;
+            z-index: 3;
+            cursor: pointer;
+            padding-bottom: 0;
+            opacity: 1;
+            font-size: 1.6rem;
+            flex-grow: 1;
+            text-align: right;
         }
     }
-
+    
     &.-range{
         width: 100%;
         display: flex;
@@ -263,6 +310,28 @@ input{
 
     &:disabled{
         background: $bg-white;
+        cursor: not-allowed !important;
+
+        & ~ .m-formGroup__radiobutton, & ~ .m-formGroup__checkbox{
+            cursor: not-allowed;
+        }
+        & ~ .m-formGroup__radiobutton::before, & ~ .m-formGroup__checkbox::before{
+            border: 2px solid $border-medium;
+            cursor: not-allowed;
+        }
+        & ~ .m-formGroup__label{
+            color: $text-medium;
+            cursor: not-allowed;
+        }
+        & ~ .m-formGroup__text{
+            color: $text-medium;
+            cursor: not-allowed;
+        }
+        & ~ .m-formGroup__price{
+            color: $text-medium;
+            cursor: not-allowed;
+        }
+        
     }
 }
 .m-formGroup__error{
@@ -386,3 +455,14 @@ input{
     }
 }
 
+
+.login-form{
+    margin: 0;
+}
+
+
+@media screen and (max-width:575px){
+    .m-formGroup{
+        margin-bottom: 10px;
+    }
+}

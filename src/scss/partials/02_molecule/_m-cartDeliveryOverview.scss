@@ -1,11 +1,15 @@
 .m-cartDeliveryOverview{
+    border-bottom: 1px solid $border-grey;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.m-cartDeliveryOverview__wrap{
     background: $bg-white;
-    padding: 15px 20px;
+    padding: 20px 0px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 10px;
     border-radius: $border-radius-primary;
 }
 .m-cartDeliveryOverview__text{

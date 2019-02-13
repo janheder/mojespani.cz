@@ -2,7 +2,8 @@
 	display: flex;
 	flex-direction: row;
     margin-bottom: 10px;
-    padding: 0 15px;
+    padding: 10px 0px;
+    border-bottom: 1px solid $border-grey;
 }
 .m-cartItemTop__col{
     flex-grow: 1;
@@ -11,7 +12,8 @@
 	flex-direction: row;
 }
 .m-cartItemTop__item{
-    @include f-14-primary-regular;
+    @include f-14-dark-regular;
+    color: $text-medium;
     margin: 0;
     padding: 0px 5px;
     flex-grow: 1;	

@@ -3,6 +3,7 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
+        include partials/_modal-login.pug
         header.o-header
             include partials/_navMain.pug
             include partials/_navProducts.pug
@@ -28,7 +29,7 @@ html(lang=lang)
                                     .a-tag.-top Top
 
 
-
+                        
                             .m-productDetailCarousel__gallery(itemscope itemtype="http://schema.org/ImageGallery")
                                 .swiper-container-horizontal.m-productDetailCarousel__content
                                     .swiper-wrapper.m-productDetailCarousel__wrap

@@ -1,6 +1,7 @@
 .o-pageHeading{
     background: $bg-light;;
-    padding: 10rem 0;
+    padding: 9rem 0;
+    position: relative;
 }
 .o-pageHeading__container{
     position: relative;
@@ -19,8 +20,9 @@
     }
 }
 .o-pageHeading__text{
-    @include f-16-white-regular;
-    margin: 0;
+    @include f-16-dark-regular;
+    margin: 10px auto 0 auto;
+    max-width: 560px;
     text-align: center;
 }
 

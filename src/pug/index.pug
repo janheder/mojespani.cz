@@ -3,6 +3,7 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
+        include partials/_modal-login.pug
         header.o-header
             include partials/_navMain.pug
             include partials/_navProducts.pug
@@ -131,7 +132,7 @@ html(lang=lang)
             .tab-content.o-tabs__content.m-tabsContent
 
                 .tab-pane.fade.m-tabsContent__pane.show.active(id="index-1" role="tabpanel" aria-labelledby="index-1-tab")  
-                    .m-tabsContent__collapseToggle(data-toggle="collapse" data-target="#collapseIndexTab-1" aria-expanded="true" aria-controls="#collapseIndexTab-1") Doporučené
+                    .m-tabsContent__collapseToggle(data-toggle="collapse" data-target="#collapseIndexTab-1" aria-expanded="false" aria-controls="#collapseIndexTab-1") Doporučené
                     .collapse.m-tabsContent__collapse.show(id="collapseIndexTab-1" aria-labelledby="collapseIndexTab-1")
                         .container  
                             .o-sectionSale.m-productCarousel

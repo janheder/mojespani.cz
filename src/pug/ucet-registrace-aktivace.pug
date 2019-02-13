@@ -3,6 +3,7 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
+        include partials/_modal-login.pug
         include partials/_navMain.pug
         include partials/_navProducts.pug
                 
@@ -34,9 +35,11 @@ html(lang=lang)
                                 span.m-formGroup__error Neplatné heslo
                                 span.m-formGroup__success
 
-                            button.btn.-secondary.-fullWidth(type="submit" id="login_form_submit") Přihlásit se
+                            .o-form__group.m-formGroup
+                                a.o-form__link.-alignRight(href="#") Obnovit zapomenuté heslo
 
-                            a.o-form__link(href="#") Obnovit zapomenuté heslo
+                            button.btn.-fullWidth(type="submit" id="login_form_submit") Přihlásit se #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
+
 
                     .col-12.col-sm-12.col-md-12.col-lg-3
 

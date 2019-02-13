@@ -3,28 +3,38 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
-        include partials/_navMain.pug
-        include partials/_navProducts.pug
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
         include partials/_modal-question.pug
-        include partials/_breadcrumb.pug
+
+        section.o-pageHeading
+            include partials/_breadcrumb-transparent.pug
+            .container.o-pageHeading__container
+                h1.o-pageHeading__title Uživatelský účet
+
         main
             .container
                 .row
-                    .col-12.col-sm-12.col-md-12.col-lg-4
-                        .m-userSidebar
-                            .m-userSidebar__top
-                                img.m-userSidebar__img(src=URLbase+"img/user-icon.svg" alt="Petr Novák" title="Petr Novák")
-                                .m-userSidebar__title Petr Novák
-                            .m-userSidebar__bottom
-                                a.m-userSidebar__link.-active(href="#") #[span.a-icon.-personalInfo.-red] Změna osobních údajů
-                                a.m-userSidebar__link(href="#") #[span.a-icon.-calendar] Historie objednávek
-                                a.m-userSidebar__link(href="#") #[span.a-icon.-logOut] Odhlásit
+                    .col-12.col-sm-12.col-md-12.col-lg-1
 
 
-                    .col-12.col-sm-12.col-md-12.col-lg-8
-                        form.o-form.-noMargin(method="post" action="" name="register_form" id="register_form")
-                            .o-form__title Změna osobních údajů
+                    .col-12.col-sm-12.col-md-12.col-lg-10
 
+                        nav.o-tabs__nav.m-tabsNav.-paddingBottom
+
+                          
+                            .nav.nav-tabs.m-tabsNav__nav(role="tablist")
+                        
+                                a.m-tabsNav__link.active(href="#") Změna osobních údajů
+                        
+                                a.m-tabsNav__link(href="#") Historie objednávek
+                    
+                                a.m-tabsNav__link(href="#") Odhlásit
+                    
+
+                        form.o-form(method="post" action="" name="register_form" id="register_form")
                             .o-form__divider.m-formDivider Osobní údaje
 
                             .row
@@ -96,7 +106,7 @@ html(lang=lang)
 
                                 .col-12.col-md-3
                                     .o-form__group.m-formGroup
-                                        input.m-formGroup__input(type="number" name="register_form_postal_code" id="register_form_postal_code" autocomplete="postal-code" required placeholder=" ")
+                                        input.m-formGroup__input(type="text" name="register_form_postal_code" id="register_form_postal_code" autocomplete="postal-code" required placeholder=" ")
                                         label.m-formGroup__label(for="register_form_postal_code") PSČ
                                         span.m-formGroup__error Neplatné PSČ
                                         span.m-formGroup__success
@@ -167,7 +177,7 @@ html(lang=lang)
                                             span.m-formGroup__success
 
                                         .o-form__group.m-formGroup
-                                            input.m-formGroup__input(type="number" name="register_form_billing_postal_code" id="register_form_billing_postal_code" autocomplete="postal-code" placeholder=" ")
+                                            input.m-formGroup__input(type="text" name="register_form_billing_postal_code" id="register_form_billing_postal_code" autocomplete="postal-code" placeholder=" ")
                                             label.m-formGroup__label(for="register_form_billing_postal_code") PSČ
                                             span.m-formGroup__error Neplatné PSČ
                                             span.m-formGroup__success
@@ -246,18 +256,23 @@ html(lang=lang)
                             .o-form__group.m-formGroup.-checkbox
                                 input.m-formGroup__input(type="checkbox" name="register_form_newsletter" id="register_form_newsletter")
                                 span.m-formGroup__checkbox.a-checkbox
-                                label.m-formGroup__label.-small(for="register_form_newsletter") Chci odebírat newsletter a souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem zasílání informací o novinkách a slevách.            
+                                label.m-formGroup__label(for="register_form_newsletter") Chci odebírat newsletter a souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem zasílání informací o novinkách a slevách.            
 
                             .o-form__group.m-formGroup.-checkbox
                                 input.m-formGroup__input(type="checkbox" name="register_form_legal" id="register_form_legal" required)
                                 span.m-formGroup__checkbox.a-checkbox
-                                label.m-formGroup__label.-small(for="register_form_legal") Souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem registrace .            
+                                label.m-formGroup__label(for="register_form_legal") Souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem registrace .            
                 
                             .m-cartButtons
-                                button.btn.-secondary.-fullWidth(type="submit" id="register_form_submit") Potvrdit úpravy
+                                a.btn.-remove.-transparent(href="#" data-toggle="modal" data-target="#modal-question") Smazat účet
+                                button.btn.-fullWidth(type="submit" id="register_form_submit") Potvrdit úpravy #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
 
-                            .m-cartButtons
-                                a.btn.-remove.-transparent.-fullWidth(href="#" data-toggle="modal" data-target="#modal-question") Smazat účet
+               
+                                
+
+
+                    .col-12.col-sm-12.col-md-12.col-lg-1
+
 
         include partials/_footer.pug
 

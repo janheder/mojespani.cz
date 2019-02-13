@@ -3,8 +3,10 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
-        include partials/_navMain.pug
-        include partials/_navProducts.pug
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
         main
             .container
                 .o-cartEmpty.-success

@@ -79,107 +79,112 @@
                 <input class="m-formGroup__input" type="password" name="login_form_pass" id="login_form_pass" autocomplete="password" required placeholder=" ">
                 <label class="m-formGroup__label" for="login_form_name">Heslo</label><span class="m-formGroup__error">Neplatné heslo</span><span class="m-formGroup__success"></span>
               </div>
-              <button class="btn -fullWidth" type="submit" name="login_form_submit" id="login_form_submit">Přihlásit</button><a class="o-form__link -alt" href="#">Vytvořit účet</a><a class="o-form__link" href="#">Obnovit zapomenuté heslo</a>
+              <div class="o-form__group m-formGroup"><a class="o-form__link -alignRight" href="#">Obnovit zapomenuté heslo</a></div>
+              <div class="o-form__group m-formGroup">
+                <button class="btn -fullWidth" type="submit" name="login_form_submit" id="login_form_submit">Přihlásit</button>
+              </div><span class="o-form__text">Nemáte u nás účet? <a class="o-form__link" href="#">Zaregistrujte se</a></span>
             </form>
           </div>
         </div>
       </div>
     </div>
-    <nav class="o-navMain">
-      <div class="o-navMain__navToggler m-navToggler" id="js-navToggler">
-        <div class="a-icon -hamburger m-navToggler__icon"></div>
-      </div>
-      <div class="o-navMain__logo m-navLogo"><a class="m-navLogo__link" href="#"><img class="m-navLogo__img" src="img/logo.svg" alt="" title=""></a></div>
-      <div class="o-navMain__search m-navSearch" id="js-navSearch">
-        <form class="m-navSearch__form" method="POST" id="search-form">
-          <div class="m-navSearch__close" id="js-navSearchTogglerClose">
-            <div class="a-icon -cross m-navSearch__closeIcon"></div>
-          </div>
-          <input class="m-navSearch__input" type="text" name="searchbox" id="searchbox" placeholder="Hledejte název produktu, značku nebo typ" required>
-          <button class="m-navSearch__button"><span class="a-icon -search m-navSearch__icon"></span></button>
-        </form>
-      </div>
-      <div class="o-navMain__navSearchToggler m-navSearchToggler" id="js-navSearchToggler">
-        <div class="a-icon -search m-navSearchToggler__icon"></div>
-      </div>
-      <!--
-      <a class="o-navMain__user m-navUser" href="#" data-toggle="modal" data-target="#modal-login">
-      	<div class="a-icon -user -grey m-navUser__icon"></div>
-      	<div class="m-navUser__info"><span class="m-navUser__title">Přihlášení</span></div>
-      </a>
-      
-      -->
-      <div class="o-navMain__user m-navUser" data-toggle="collapse" data-target="#collapseNavUser" aria-expanded="false" aria-controls="collapseNavUser">
-        <div class="a-icon -user -grey m-navUser__icon"></div>
-        <div class="m-navUser__info"><span class="m-navUser__text">Přihlášen jako</span><span class="m-navUser__title">Petr Novák</span></div>
-        <div class="collapse m-navUser__collapse" id="collapseNavUser" aria-labelledby="collapseNavUser"><a class="m-navUser__collapseLink" href="#">Změna osobních údajů</a><a class="m-navUser__collapseLink" href="#">Historie objednávek</a><a class="m-navUser__collapseLink" href="#">Odhlásit</a></div>
-      </div>
-      <!--
-      <a class="o-navMain__cart m-navCart" href="#">
-      	<div class="m-navCart__iconWrap">
-      		<div class="a-icon -cart -grey m-navCart__icon"></div>
-      	</div>
-      	<div class="m-navCart__info"><span class="m-navCart__title">Nákupní košík</span></div>
-      </a>
-      
-      -->
-      <div class="o-navMain__cart m-navCart -active"><a class="m-navCart__desktopLink" href="#"></a>
-        <div class="m-navCart__toggle" data-toggle="collapse" data-target="#collapseNavCart" aria-expanded="false" aria-controls="collapseNavCart">
-          <div class="m-navCart__iconWrap">
-            <div class="a-icon -cart -red m-navCart__icon">
-              <div class="m-navCart__icoNumber">2</div>
+    <header class="o-header">
+      <nav class="o-navMain">
+        <div class="o-navMain__navToggler m-navToggler" id="js-navToggler">
+          <div class="a-icon -hamburger m-navToggler__icon"></div>
+        </div>
+        <div class="o-navMain__logo m-navLogo"><a class="m-navLogo__link" href="#"><img class="m-navLogo__img" src="img/logo.svg" alt="" title=""></a></div>
+        <div class="o-navMain__search m-navSearch" id="js-navSearch">
+          <form class="m-navSearch__form" method="POST" id="search-form">
+            <div class="m-navSearch__close" id="js-navSearchTogglerClose">
+              <div class="a-icon -cross m-navSearch__closeIcon"></div>
             </div>
-          </div>
-          <div class="m-navCart__info"><span class="m-navCart__text">Nákupní košík</span><span class="m-navCart__title">859 Kč</span></div>
-          <div class="collapse m-navCart__collapse" id="collapseNavCart" aria-labelledby="collapseNavCart">
-            <div class="m-navCart__collapseItem">
-              <div class="m-navCart__collapseThumb"><img class="m-navCart__collapseImg lazy" src="img/placeholder-60x60.png" data-src="img/product-thumb-small.jpg" alt="#" title="#"></div>
-              <div class="m-navCart__collapseInfo">
-                <div class="m-navCart__collapseName">Postel Angelika 160/200 cm masiv borovice</div>
-                <div class="m-navCart__collapsePrice">2 000 Kč</div>
-                <div class="m-navCart__collapseStock">Skladem</div>
+            <input class="m-navSearch__input" type="text" name="searchbox" id="searchbox" placeholder="Hledejte název produktu, značku nebo typ" required>
+            <button class="m-navSearch__button"><span class="a-icon -search m-navSearch__icon"></span></button>
+          </form>
+        </div>
+        <div class="o-navMain__navSearchToggler m-navSearchToggler" id="js-navSearchToggler">
+          <div class="a-icon -search m-navSearchToggler__icon"></div>
+        </div>
+        <!--
+        <a class="o-navMain__user m-navUser" href="#" data-toggle="modal" data-target="#modal-login">
+        	<div class="a-icon -user -grey m-navUser__icon"></div>
+        	<div class="m-navUser__info"><span class="m-navUser__title">Přihlášení</span></div>
+        </a>
+        
+        -->
+        <div class="o-navMain__user m-navUser" data-toggle="collapse" data-target="#collapseNavUser" aria-expanded="false" aria-controls="collapseNavUser">
+          <div class="a-icon -user -grey m-navUser__icon"></div>
+          <div class="m-navUser__info"><span class="m-navUser__text">Přihlášen jako</span><span class="m-navUser__title">Petr Novák</span></div>
+          <div class="collapse m-navUser__collapse" id="collapseNavUser" aria-labelledby="collapseNavUser"><a class="m-navUser__collapseLink" href="#">Změna osobních údajů</a><a class="m-navUser__collapseLink" href="#">Historie objednávek</a><a class="m-navUser__collapseLink" href="#">Odhlásit</a></div>
+        </div>
+        <!--
+        <a class="o-navMain__cart m-navCart" href="#">
+        	<div class="m-navCart__iconWrap">
+        		<div class="a-icon -cart -grey m-navCart__icon"></div>
+        	</div>
+        	<div class="m-navCart__info"><span class="m-navCart__title">Nákupní košík</span></div>
+        </a>
+        
+        -->
+        <div class="o-navMain__cart m-navCart -active"><a class="m-navCart__desktopLink" href="#"></a>
+          <div class="m-navCart__toggle" data-toggle="collapse" data-target="#collapseNavCart" aria-expanded="false" aria-controls="collapseNavCart">
+            <div class="m-navCart__iconWrap">
+              <div class="a-icon -cart -red m-navCart__icon">
+                <div class="m-navCart__icoNumber">2</div>
               </div>
             </div>
-            <div class="m-navCart__collapseItem">
-              <div class="m-navCart__collapseThumb"><img class="m-navCart__collapseImg lazy" src="img/placeholder-60x60.png" data-src="img/product-thumb-small.jpg" alt="#" title="#"></div>
-              <div class="m-navCart__collapseInfo">
-                <div class="m-navCart__collapseName">Postel Angelika 160/200 cm masiv borovice</div>
-                <div class="m-navCart__collapsePrice">2 000 Kč</div>
-                <div class="m-navCart__collapseStock">Skladem</div>
+            <div class="m-navCart__info"><span class="m-navCart__text">Nákupní košík</span><span class="m-navCart__title">859 Kč</span></div>
+            <div class="collapse m-navCart__collapse" id="collapseNavCart" aria-labelledby="collapseNavCart">
+              <div class="m-navCart__collapseItem">
+                <div class="m-navCart__collapseThumb"><img class="m-navCart__collapseImg lazy" src="img/placeholder-60x60.png" data-src="img/product-thumb-small.jpg" alt="#" title="#"></div>
+                <div class="m-navCart__collapseInfo">
+                  <div class="m-navCart__collapseName">Postel Angelika 160/200 cm masiv borovice</div>
+                  <div class="m-navCart__collapsePrice">2 000 Kč</div>
+                  <div class="m-navCart__collapseStock">Skladem</div>
+                </div>
               </div>
-            </div>
-            <div class="m-navCart__collapseOverview">
-              <div class="m-navCart__collapsePriceWrap">
-                <div class="m-navCart__collapseTitle">Celková cena</div>
-                <div class="m-navCart__collapseText">Včetně DPH</div>
+              <div class="m-navCart__collapseItem">
+                <div class="m-navCart__collapseThumb"><img class="m-navCart__collapseImg lazy" src="img/placeholder-60x60.png" data-src="img/product-thumb-small.jpg" alt="#" title="#"></div>
+                <div class="m-navCart__collapseInfo">
+                  <div class="m-navCart__collapseName">Postel Angelika 160/200 cm masiv borovice</div>
+                  <div class="m-navCart__collapsePrice">2 000 Kč</div>
+                  <div class="m-navCart__collapseStock">Skladem</div>
+                </div>
               </div>
-              <div class="m-navCart__collapseSum">2 000 Kč</div>
+              <div class="m-navCart__collapseOverview">
+                <div class="m-navCart__collapsePriceWrap">
+                  <div class="m-navCart__collapseTitle">Celková cena</div>
+                  <div class="m-navCart__collapseText">Včetně DPH</div>
+                </div>
+                <div class="m-navCart__collapseSum">2 000 Kč</div>
+              </div>
+              <div class="m-navCart__collapseShipping">Nakupte ještě za 1077 Kč a máte Dopravu zdarma	</div>
+              <div class="m-navCart__collapseBtn"><a class="btn -small -fullWidth" href="#">Objednat zboží</a></div>
             </div>
-            <div class="m-navCart__collapseShipping">Nakupte ještě za 1077 Kč a máte Dopravu zdarma	</div>
-            <div class="m-navCart__collapseBtn"><a class="btn -small -fullWidth" href="#">Objednat zboží</a></div>
           </div>
         </div>
-      </div>
-    </nav>
-    <div class="a-darkOverlay" id="js-darkOverlay"></div>
-    <div class="a-navPush"></div>
+      </nav>
+      <div class="a-darkOverlay" id="js-darkOverlay"></div>
+      <div class="a-navPush"></div>
+    </header>
     <section class="o-cartNav">
       <div class="container o-cartNav__container">
         <div class="o-cartNav__single -complete">
-          <div class="o-cartNav__title">Nákupní košík</div>
           <div class="o-cartNav__number">1</div>
+          <div class="o-cartNav__title">Nákupní košík</div>
         </div>
         <div class="o-cartNav__single -complete">
-          <div class="o-cartNav__title">Doprava a platba</div>
           <div class="o-cartNav__number">2</div>
+          <div class="o-cartNav__title">Doprava a platba</div>
         </div>
         <div class="o-cartNav__single -active">
-          <div class="o-cartNav__title">Osobní údaje</div>
           <div class="o-cartNav__number">3</div>
+          <div class="o-cartNav__title">Osobní údaje</div>
         </div>
         <div class="o-cartNav__single">
-          <div class="o-cartNav__title">Shrnutí objednávky</div>
           <div class="o-cartNav__number">4</div>
+          <div class="o-cartNav__title">Shrnutí objednávky</div>
         </div>
       </div>
     </section>
@@ -189,49 +194,10 @@
     <div class="a-cartNavResponsivePush"></div>
     <main>
       <div class="container">
-        <div class="m-cartOverview">
-          <div class="m-cartOverview__product">
-            <div class="m-cartOverview__productSingle">
-              <div class="m-cartOverview__productThumb"><img class="m-cartOverview__productImg" src="img/product-thumb-small.jpg" alt="#" title="#"></div>
-              <div class="m-cartOverview__productNumber">2x</div>
-            </div>
-            <div class="m-cartOverview__productSingle">
-              <div class="m-cartOverview__productThumb"><img class="m-cartOverview__productImg" src="img/product-thumb-small.jpg" alt="#" title="#"></div>
-              <div class="m-cartOverview__productNumber">2x</div>
-            </div>
-            <div class="m-cartOverview__productSingle" data-toggle="tooltip" data-html="true" title="Produkt název&lt;br&gt;Produkt název&lt;br&gt;Produkt název" data-placement="right">
-              <div class="m-cartOverview__productThumb -more">
-                <div class="m-cartOverview__productImg">+10</div>
-              </div>
-              <div class="m-cartOverview__productNumber"></div>
-            </div>
-          </div>
-          <div class="m-cartOverview__plus"> </div>
-          <div class="m-cartOverview__shipping">
-            <div class="m-cartOverview__shippingText">Způsob dopravy</div>
-            <div class="m-cartOverview__shippingWrap">
-              <div class="m-cartOverview__shippingTitle">Nevybráno</div>
-              <div class="m-cartOverview__shippingNumber"></div>
-            </div>
-          </div>
-          <div class="m-cartOverview__plus"> </div>
-          <div class="m-cartOverview__payment">
-            <div class="m-cartOverview__paymentText">Způsob platby</div>
-            <div class="m-cartOverview__paymentWrap">
-              <div class="m-cartOverview__paymentTitle">Nevybráno </div>
-              <div class="m-cartOverview__paymentNumber"></div>
-            </div>
-          </div>
-          <div class="m-cartOverview__equals"> </div>
-          <div class="m-cartOverview__price">
-            <div class="m-cartOverview__priceText">Celková cena s DPH</div>
-            <div class="m-cartOverview__priceTitle">0 Kč</div>
-          </div>
-        </div>
         <div class="a-cartResponsiveError">Prosím zadejte své osobní údaje nebo se přihlaste.</div>
         <div class="row">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-8 register-form-col">
-            <form class="o-form" method="post" action="" name="register_form" id="register_form"><a class="o-form__collapseToggler" data-toggle="collapse" id="js-registerCollpaseToggler" href="#register-collapse" aria-expanded="true" aria-controls="register-collapse">Bez registrace <span class="a-icon -cheveron o-form__collapseTogglerIcon"></span></a>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+            <form class="o-form -paddingRight" method="post" action="" name="register_form" id="register_form"><a class="o-form__collapseToggler" data-toggle="collapse" id="js-registerCollpaseToggler" href="#register-collapse" aria-expanded="true" aria-controls="register-collapse">Bez registrace <span class="a-icon -cheveron o-form__collapseTogglerIcon"></span></a>
               <div class="collapse o-form__collapse show" id="register-collapse">
                 <h2 class="o-form__title">Bez registrace</h2>
                 <div class="o-form__divider m-formDivider">Osobní údaje</div>
@@ -283,7 +249,7 @@
                   </div>
                   <div class="col-12 col-md-3">
                     <div class="o-form__group m-formGroup">
-                      <input class="m-formGroup__input" type="number" name="register_form_postal_code" id="register_form_postal_code" autocomplete="postal-code" required placeholder=" ">
+                      <input class="m-formGroup__input" type="text" name="register_form_postal_code" id="register_form_postal_code" autocomplete="postal-code" required placeholder=" ">
                       <label class="m-formGroup__label" for="register_form_postal_code">PSČ</label><span class="m-formGroup__error">Neplatné PSČ</span><span class="m-formGroup__success"></span>
                     </div>
                   </div>
@@ -338,7 +304,7 @@
                         <label class="m-formGroup__label" for="register_form_billing_locality">Město</label><span class="m-formGroup__error">Neplatné město</span><span class="m-formGroup__success"></span>
                       </div>
                       <div class="o-form__group m-formGroup">
-                        <input class="m-formGroup__input" type="number" name="register_form_billing_postal_code" id="register_form_billing_postal_code" autocomplete="postal-code" placeholder=" ">
+                        <input class="m-formGroup__input" type="text" name="register_form_billing_postal_code" id="register_form_billing_postal_code" autocomplete="postal-code" placeholder=" ">
                         <label class="m-formGroup__label" for="register_form_billing_postal_code">PSČ</label><span class="m-formGroup__error">Neplatné PSČ</span><span class="m-formGroup__success"></span>
                       </div>
                       <div class="o-form__group m-formGroup -radiobutton">
@@ -410,30 +376,56 @@
                 <div class="o-form__legal">Vložením údajů beru na vědomí <a href="#">zpracování osobních údajů</a></div>
                 <div class="o-form__group m-formGroup -checkbox">
                   <input class="m-formGroup__input" type="checkbox" name="register_form_newsletter" id="register_form_newsletter"><span class="m-formGroup__checkbox a-checkbox"></span>
-                  <label class="m-formGroup__label -small" for="register_form_newsletter">Chci odebírat newsletter a souhlasím se <a href="#">zpracováním osobních údajů</a> za účelem zasílání informací o novinkách a slevách.            </label>
+                  <label class="m-formGroup__label" for="register_form_newsletter">Chci odebírat newsletter a souhlasím se <a href="#">zpracováním osobních údajů</a> za účelem zasílání informací o novinkách a slevách.            </label>
                 </div>
                 <div class="m-cartButtons"><a class="btn -dark" href="#">Krok zpět</a>
-                  <button class="btn -secondary" type="submit" id="register_form_submit">Osobní údaje <span class="a-btnIcon"><span class="a-icon -cheveron -white"></span></span>  </button>
+                  <button class="btn" type="submit" id="register_form_submit">Osobní údaje <span class="a-btnIcon"><span class="a-icon -cheveron -white"></span></span>  </button>
                 </div>
               </div>
             </form>
           </div>
-          <div class="col-12 col-sm-12 col-md-12 col-lg-4 login-form-col">
-            <form class="o-form login-form" method="post" action="" name="login_form"><a class="o-form__collapseToggler" data-toggle="collapse" href="#login-collapse" aria-expanded="true" aria-controls="login-collapse">Přihlášení <span class="a-icon -cheveron o-form__collapseTogglerIcon"></span></a>
-              <div class="collapse o-form__collapse show" id="login-collapse">
-                <h2 class="o-form__title">Přihlášení</h2>
-                <p class="o-form__text">Jako registrovaný uživatel získává slevu ve výši 1% na veškeré zboží, které není aktuálně ve slevě. </p>
-                <div class="o-form__group m-formGroup">
-                  <input class="m-formGroup__input" type="email" name="login_form_email" id="login_form_email" autocomplete="email" required placeholder=" ">
-                  <label class="m-formGroup__label" for="login_form_email">Emailová adresa</label><span class="m-formGroup__error">Neplatný email</span><span class="m-formGroup__success"></span>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+            <div class="m-cartOverview" data-price="10000">
+              <div class="m-cartOverview__title">Shrnutí objednávky</div>
+              <div class="m-cartOverview__productSingle">
+                <div class="m-cartOverview__productThumb"><img class="m-cartOverview__productImg" src="img/product-thumb-small.jpg" at="#" title="#"></div>
+                <div class="m-cartOverview__productContent">
+                  <div class="m-cartOverview__productTitle">Kočárek Lonex Speedy Vogue a dlouhý název lorem ipsum dolor sit amet</div>
+                  <div class="m-cartOverview__productSub">
+                    <div class="m-cartOverview__productNumber">1 kus/ů</div>
+                    <div class="m-cartOverview__productPrice">18 546 Kč</div>
+                  </div>
                 </div>
-                <div class="o-form__group m-formGroup">
-                  <input class="m-formGroup__input" type="password" name="login_form_password" id="login_form_password" autocomplete="password" required placeholder=" ">
-                  <label class="m-formGroup__label" for="login_form_password">Heslo</label><span class="m-formGroup__error">Neplatné heslo</span><span class="m-formGroup__success"></span>
-                </div>
-                <button class="btn -secondary -fullWidth" type="submit" id="login_form_submit_cart">Přihlásit se</button><a class="o-form__link" href="#">Obnovit zapomenuté heslo</a>
               </div>
-            </form>
+              <div class="m-cartOverview__productSingle">
+                <div class="m-cartOverview__productThumb"><img class="m-cartOverview__productImg" src="img/product-thumb-small.jpg" at="#" title="#"></div>
+                <div class="m-cartOverview__productContent">
+                  <div class="m-cartOverview__productTitle">Kočárek Lonex Speedy Vogue a dlouhý název lorem ipsum dolor sit amet</div>
+                  <div class="m-cartOverview__productSub">
+                    <div class="m-cartOverview__productNumber">1 kus/ů</div>
+                    <div class="m-cartOverview__productPrice">18 546 Kč                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="m-cartOverview__shipping">
+                <div class="m-cartOverview__shippingText">Způsob dopravy</div>
+                <div class="m-cartOverview__shippingWrap">
+                  <div class="m-cartOverview__shippingTitle">Nevybráno</div>
+                  <div class="m-cartOverview__shippingNumber"></div>
+                </div>
+              </div>
+              <div class="m-cartOverview__payment">
+                <div class="m-cartOverview__paymentText">Způsob platby</div>
+                <div class="m-cartOverview__paymentWrap">
+                  <div class="m-cartOverview__paymentTitle">Nevybráno </div>
+                  <div class="m-cartOverview__paymentNumber"></div>
+                </div>
+              </div>
+              <div class="m-cartOverview__price">
+                <div class="m-cartOverview__priceText">Celková cena s DPH</div>
+                <div class="m-cartOverview__priceTitle">10 000 Kč  </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -443,7 +435,7 @@
           <h3 class="m-cartBarResponsive__price"><span>65 599</span> Kč</h3>
         </div>
         <div class="m-cartBarResponsive__btnWrap">
-          <button class="btn -secondary m-cartBarResponsive__btn" onclick="responsive_check()">Osobní údaje <span class="a-btnIcon"><span class="a-icon -cheveron -white"></span></span></button>
+          <button class="btn m-cartBarResponsive__btn" onclick="responsive_check()">Osobní údaje <span class="a-btnIcon"><span class="a-icon -cheveron -white"></span></span></button>
         </div>
       </div>
       <script>

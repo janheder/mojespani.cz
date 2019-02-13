@@ -20,7 +20,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    height: 50px;
+    height: 48px;
     width: 60px;
     background: transparent;
     border: 0;
@@ -29,6 +29,10 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.m-navSearch__icon{
+    height: 18px;
+    width: 18px;
 }
 .easy-autocomplete-container{
     box-shadow: $box-shadow-primary;

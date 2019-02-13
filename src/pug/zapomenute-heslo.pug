@@ -3,10 +3,17 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
-        include partials/_navMain.pug
-        include partials/_navProducts.pug
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
                 
-        include partials/_breadcrumb.pug
+        section.o-pageHeading
+            include partials/_breadcrumb-transparent.pug
+            .container.o-pageHeading__container
+                h1.o-pageHeading__title Zapomenuté heslo
+                p.o-pageHeading__text Pokud jste zapomněli své heslo, pošleme Vám nové na email, který jste uvedli při registraci.
+               
         main
             .container
                 .row
@@ -16,9 +23,6 @@ html(lang=lang)
 
                         form.o-form(method="post" action="" class="login-form" name="login_form")
 
-                            h2.o-form__title Zapomenuté heslo
-                            p.o-form__text Pokud jste zapomněli své heslo, pošleme Vám nové na email, který jste uvedli při registraci.
-
                             .o-form__group.m-formGroup
                                 input.m-formGroup__input(type="email" name="login_form_email" id="login_form_email" autocomplete="email" required placeholder=" ")
                                 label.m-formGroup__label(for="login_form_email") Emailová adresa
@@ -26,7 +30,7 @@ html(lang=lang)
                                 span.m-formGroup__success
 
 
-                            button.btn.-secondary.-fullWidth(type="submit" id="login_form_submit") Poslat nové heslo
+                            button.btn.-fullWidth(type="submit" id="login_form_submit") Poslat nové heslo #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
 
      
 

@@ -3,17 +3,15 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
-        include partials/_navMain.pug
-        include partials/_navProducts.pug
-        
-        section.o-pageHeading.b-bgCover__wrap
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
+
+        section.o-pageHeading
             include partials/_breadcrumb-transparent.pug
             .container.o-pageHeading__container
-                h1.o-pageHeading__title Lorem ipsum dolor sit amet
-                p.o-pageHeading__text Napsáno: 1. 1. 1970
-            img.lazy.o-pageHeading__img.b-bgCover__img(src=URLbase+"img/lazy/lazy-news-thumb-large.jpg" data-src=URLbase+"img/news-thumb-large.jpg" alt="#" title="#")
-
-
+                h1.o-pageHeading__title Textová stránka
         main
             .container
                 .printArea

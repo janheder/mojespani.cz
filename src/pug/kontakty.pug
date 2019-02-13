@@ -1,10 +1,12 @@
 doctype html
 include partials/_variables.pug  
 html(lang=lang)
-    include partials/_header.pug  
+    include partials/_header.pug
     body
-        include partials/_navMain.pug
-        include partials/_navProducts.pug
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
+            include partials/_navProducts.pug
         include partials/_modal-reklamace.pug
         section.o-pageHeading.b-bgCover__wrap
             include partials/_breadcrumb-transparent.pug

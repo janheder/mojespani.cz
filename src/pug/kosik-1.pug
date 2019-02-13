@@ -3,21 +3,27 @@ include partials/_variables.pug
 html(lang=lang)
     include partials/_header.pug  
     body
-        include partials/_navMain.pug
+        include partials/_modal-login.pug
+        header.o-header
+            include partials/_navMain.pug
         section.o-cartNav
             .container.o-cartNav__container
                 .o-cartNav__single.-active
-                    .o-cartNav__title Nákupní košík
                     .o-cartNav__number 1
+                    .o-cartNav__title Nákupní košík
+                    
                 .o-cartNav__single
-                    .o-cartNav__title Doprava a platba
                     .o-cartNav__number 2
+                    .o-cartNav__title Doprava a platba
+                    
                 .o-cartNav__single
-                    .o-cartNav__title Osobní údaje
                     .o-cartNav__number 3
+                    .o-cartNav__title Osobní údaje
+                    
                 .o-cartNav__single
-                    .o-cartNav__title Shrnutí objednávky
                     .o-cartNav__number 4
+                    .o-cartNav__title Shrnutí objednávky
+                    
 
         section.o-cartNavResponsive
             a.o-cartNavResponsive__link.-prev.-disabled(href="#")
@@ -84,9 +90,8 @@ html(lang=lang)
 
 
                     .m-cartButtons
-                        a.btn.-dark(href="#") Zpět do obchodu
-                        a.btn.-remove.-transparent(href="#") Vyprázdnit košík
-                        button.btn.-secondary(type="submit" id="cart-form-submit") Doprava a platba #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
+                        a.btn.-dark(href="#") #[span.a-btnIcon.-rotate180 #[span.a-icon.-cheveron.-white]] Zpět do obchodu
+                        button.btn(type="submit" id="cart-form-submit") Doprava a platba #[span.a-btnIcon #[span.a-icon.-cheveron.-white]]
                                
 
             .m-cartBarResponsive
@@ -94,7 +99,7 @@ html(lang=lang)
                     p.m-cartBarResponsive__text Celková cena s DPH
                     h3.m-cartBarResponsive__price #[span 65 599] Kč
                 .m-cartBarResponsive__btnWrap
-                    button.btn.-secondary.m-cartBarResponsive__btn(onclick="$('#cart-form-submit').trigger('click');") Doprava a platba #[span.a-btnIcon #[span.a-icon.-cheveron.-white]] 
+                    button.btn.m-cartBarResponsive__btn(onclick="$('#cart-form-submit').trigger('click');") Doprava a platba #[span.a-btnIcon #[span.a-icon.-cheveron.-white]] 
 
 
         include partials/_footer.pug 
