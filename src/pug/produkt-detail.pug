@@ -83,7 +83,7 @@ html(lang=lang)
                             
 
                             .m-productDetailMain__stock 
-                                span.a-icon.-checkCircle.-green.m-productDetailMain__stockIcon
+                                span.a-icon.-box.-green.m-productDetailMain__stockIcon
                                 span.m-productDetailMain__stockText Dostupné skladem
 
                             form.m-productDetailMain__form(method="post" name="product_detail_form" id="product_detail_form")
@@ -140,75 +140,34 @@ html(lang=lang)
                                     span.m-productDetailMain__id Katalogové číslo: Angeli160
                                     span.m-productDetailMain__id Záruka: 24 měsíců
 
+        section.o-productDetailVariants
+            .container
+                .o-productDetailVariants__heading
+                    .o-productDetailVariants__headinsSingle Název
+                    .o-productDetailVariants__headinsSingle Dostupnost
+                    .o-productDetailVariants__headinsSingle Cena
+                    .o-productDetailVariants__headinsSingle
 
-        section.o-productDescription.o-tabs(id="anchor-product-detail-description")
+                - for (var i=0; i<8; i++)
+                    .o-productDetailVariants__single
+                        .o-productDetailVariants__text Laťkový rošt s textilií 180/200 cm
+                        .o-productDetailVariants__text.-stock Skladem
+                        .o-productDetailVariants__text.-price 426 Kč
+                        a.o-productDetailVariants__text.-link(href="#") Detail produktu #[span.a-icon.-cheveron.o-productDetailVariants__icon]
 
-            nav.o-tabs__nav.m-tabsNav
-                .container  
-                    .nav.nav-tabs.m-tabsNav__nav(role="tablist")
-                
-                        a.m-tabsNav__link.active(id="product-1-tab" data-toggle="tab" href="#product-1" role="tab" aria-controls="product-1" aria-selected="true") Popis produktu
-                
-                        a.m-tabsNav__link(id="product-2-tab" data-toggle="tab" href="#product-2" role="tab" aria-controls="product-2" aria-selected="false") Parametry
-            
-                        a.m-tabsNav__link(id="product-3-tab" data-toggle="tab" href="#product-3" role="tab" aria-controls="product-3" aria-selected="false") Příslušenství
+        section.o-productDescription(id="anchor-product-detail-description")
+            .container  
+                p
+                    strong Popis
+                p Hydrance Optimale Riche je výživný hydratační krém, který je určen pro suchou až velmi suchou dehydratovanou citlivou pleť. Přináší okamžitou a intenzivní hydrataci pleti, která má dlouhotrvající účinek. Krém má vláčnou texturu, která dodává pleti pocit pohodlí. Díky unikátnímu složení se snižuje možnost vzniku alergií. Krém je vhodný jako podklad pod make-up.
 
+                p
+                    strong Dávkování a způsob užití
+                p Aplikujte krém ráno, anebo večer na dokonale čistou a osušenou pleť.
 
-            .tab-content.o-tabs__content.m-tabsContent
-
-                .tab-pane.fade.m-tabsContent__pane.show.active(id="product-1" role="tabpanel" aria-labelledby="product-1-tab")
-
-                    .m-tabsContent__collapseToggle(data-toggle="collapse" data-target="#collapseProductDescription-1" aria-expanded="false" aria-controls="#collapseProductDescription-1") Popis produktu 
-                    .collapse.m-tabsContent__collapse.show(id="collapseProductDescription-1" aria-labelledby="collapseProductDescription-1")
-
-                        .container  
-                            strong Popis
-                            p Hydrance Optimale Riche je výživný hydratační krém, který je určen pro suchou až velmi suchou dehydratovanou citlivou pleť. Přináší okamžitou a intenzivní hydrataci pleti, která má dlouhotrvající účinek. Krém má vláčnou texturu, která dodává pleti pocit pohodlí. Díky unikátnímu složení se snižuje možnost vzniku alergií. Krém je vhodný jako podklad pod make-up.
-
-                            strong Dávkování a způsob užití
-                            p Aplikujte krém ráno, anebo večer na dokonale čistou a osušenou pleť.
-
-                            strong Složení
-                            p Přípravek obsahuje termální vodu Avene, bambucké máslo, meiboserin, lipomucin.
-
-
-                .tab-pane.fade.m-tabsContent__pane(id="product-2" role="tabpanel" aria-labelledby="product-2-tab") 
-
-                    .m-tabsContent__collapseToggle(data-toggle="collapse" data-target="#collapseProductDescription-2" aria-expanded="false" aria-controls="#collapseProductDescription-2") Parametry
-                    .collapse.m-tabsContent__collapse(id="collapseProductDescription-2" aria-labelledby="collapseProductDescription-2")
-                        
-                        .container  
-                            table.table
-                                tr
-                                    th Parametr
-                                    th Hodnota
-                                tr
-                                    td Délka vnější
-                                    td 206 cm
-                                tr
-                                    td Délka vnější
-                                    td 206 cm 
-                                tr                            
-                                    td Délka vnější
-                                    td 206 cm     
-                                tr                          
-                                    td Délka vnější
-                                    td 206 cm   
-                                tr                             
-                                    td Délka vnější
-                                    td 206 cm
-
-                .tab-pane.fade.m-tabsContent__pane(id="product-3" role="tabpanel" aria-labelledby="product-3-tab")  
-
-                    .m-tabsContent__collapseToggle(data-toggle="collapse" data-target="#collapseProductDescription-3" aria-expanded="false" aria-controls="#collapseProductDescription-3") Příslušenství 
-                    .collapse.m-tabsContent__collapse(id="collapseProductDescription-3" aria-labelledby="collapseProductDescription-3")
-
-                        .container  
-                            .o-productGrid
-                                include partials/_single-product-cell.pug
-                                include partials/_single-product-cell.pug
-                                include partials/_single-product-cell.pug
-                                include partials/_single-product-cell.pug
+                p
+                    strong Složení
+                p Přípravek obsahuje termální vodu Avene, bambucké máslo, meiboserin, lipomucin.
 
 
 

@@ -34,8 +34,9 @@
     flex-direction: column;
 }
 .m-productDetailMain__descriptionTitle{
-    @include f-14-dark-semibold;
+    @include f-14-primary-semibold;
     margin: 0;
+    padding-bottom: 2px;
 }
 .m-productDetailMain__descriptionText{
     @include f-14-dark-regular;

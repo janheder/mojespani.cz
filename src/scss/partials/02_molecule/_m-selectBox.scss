@@ -71,6 +71,7 @@
 }
 .m-selectBox__stock{
     color: $text-green;
+    width: 100px;
 }
 .m-selectBox__input:checked + .m-selectBox__content{
     background: $bg-brand-secondary;

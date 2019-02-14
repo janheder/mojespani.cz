@@ -22,6 +22,8 @@
 }
 .m-navUserMenu__img{
     flex-shrink: 0;
+    height: 22px;
+    width: 22px;
 }
 .m-navUserMenu__username{
     @include f-18-white-semibold;

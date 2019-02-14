@@ -8,21 +8,22 @@ html(lang=lang)
             include partials/_navMain.pug
         section.o-cartNav
             .container.o-cartNav__container
-                .o-cartNav__single.-active
+                .o-cartNav__single.-complete
                     .o-cartNav__number 1
                     .o-cartNav__title Nákupní košík
                     
-                .o-cartNav__single
+                .o-cartNav__single.-complete
                     .o-cartNav__number 2
                     .o-cartNav__title Doprava a platba
                     
-                .o-cartNav__single
+                .o-cartNav__single.-active
                     .o-cartNav__number 3
                     .o-cartNav__title Osobní údaje
                     
                 .o-cartNav__single
                     .o-cartNav__number 4
                     .o-cartNav__title Shrnutí objednávky
+
 
 
         section.o-cartNavResponsive
@@ -36,46 +37,6 @@ html(lang=lang)
 
         main
             .container
-
-                .m-cartOverview
-                    .m-cartOverview__product
-                        .m-cartOverview__productSingle
-                            .m-cartOverview__productThumb
-                                img.m-cartOverview__productImg(src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-                            .m-cartOverview__productNumber 2x
-
-                        .m-cartOverview__productSingle
-                            .m-cartOverview__productThumb
-                                img.m-cartOverview__productImg(src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-                            .m-cartOverview__productNumber 2x
-
-                        .m-cartOverview__productSingle(data-toggle="tooltip" data-html="true" title="Produkt název<br>Produkt název<br>Produkt název" data-placement="right")
-                            .m-cartOverview__productThumb.-more
-                                .m-cartOverview__productImg +10
-                            .m-cartOverview__productNumber
-
-                    .m-cartOverview__plus 
-
-                    .m-cartOverview__shipping
-                        .m-cartOverview__shippingText Způsob dopravy
-                        .m-cartOverview__shippingWrap
-                            .m-cartOverview__shippingTitle Nevybráno
-                            .m-cartOverview__shippingNumber
-
-                    .m-cartOverview__plus 
-
-                    .m-cartOverview__payment
-                        .m-cartOverview__paymentText Způsob platby
-                        .m-cartOverview__paymentWrap
-                            .m-cartOverview__paymentTitle Nevybráno 
-                            .m-cartOverview__paymentNumber
-
-                    .m-cartOverview__equals 
-
-                    .m-cartOverview__price
-                        .m-cartOverview__priceText Celková cena s DPH
-                        .m-cartOverview__priceTitle 0 Kč
-
 
                 .a-cartResponsiveError Prosím zadejte své osobní údaje nebo se přihlaste.
 
@@ -298,18 +259,48 @@ html(lang=lang)
 
 
 
-                    .col-12.col-sm-12.col-md-12.col-lg-4.login-form-col
+                    .col-12.col-sm-12.col-md-12.col-lg-3
+                        .m-cartOverview(data-price="10000")
+                            .m-cartOverview__title Shrnutí objednávky
+                           
+                            .m-cartOverview__productSingle
 
-                        .o-form
-                            
-                            a.o-form__collapseToggler(data-toggle="collapse" href="#login-collapse" aria-expanded="true" aria-controls="login-collapse") Změnit uživatele #[span.a-icon.-cheveron.o-form__collapseTogglerIcon]
-                            .collapse.o-form__collapse.show(id="login-collapse")
+                                .m-cartOverview__productThumb
+                                    img.m-cartOverview__productImg(src=URLbase+"img/product-thumb-small.jpg" at="#" title="#")
 
-                                h2.o-form__title Změnit uživatele
-                                p.o-form__text Chcete nakupit jako někdo jiný? 
+                                .m-cartOverview__productContent
+                                    .m-cartOverview__productTitle Kočárek Lonex Speedy Vogue a dlouhý název lorem ipsum dolor sit amet
+                                    .m-cartOverview__productSub
+                                        .m-cartOverview__productNumber 1 kus/ů
+                                        .m-cartOverview__productPrice 18 546 Kč
 
+                            .m-cartOverview__productSingle
 
-                                a.btn.-secondary.-fullWidth(href="#") Odhlásit se
+                                .m-cartOverview__productThumb
+                                    img.m-cartOverview__productImg(src=URLbase+"img/product-thumb-small.jpg" at="#" title="#")
+
+                                .m-cartOverview__productContent
+                                    .m-cartOverview__productTitle Kočárek Lonex Speedy Vogue a dlouhý název lorem ipsum dolor sit amet
+                                    .m-cartOverview__productSub
+                                        .m-cartOverview__productNumber 1 kus/ů
+                                        .m-cartOverview__productPrice 18 546 Kč                     
+
+                            .m-cartOverview__shipping
+                                .m-cartOverview__shippingText Způsob dopravy
+                                .m-cartOverview__shippingWrap
+                                    .m-cartOverview__shippingTitle Nevybráno
+                                    .m-cartOverview__shippingNumber
+
+                            .m-cartOverview__payment
+                                .m-cartOverview__paymentText Způsob platby
+                                .m-cartOverview__paymentWrap
+                                    .m-cartOverview__paymentTitle Nevybráno 
+                                    .m-cartOverview__paymentNumber
+
+                            .m-cartOverview__price
+                                .m-cartOverview__priceText Celková cena s DPH
+                                .m-cartOverview__priceTitle 10 000 Kč  
+
 
 
 

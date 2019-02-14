@@ -355,6 +355,10 @@ if($(".m-selectBox .m-selectBox__input:checked")){
     var price= $(".m-selectBox .m-selectBox__input:checked").siblings(".m-selectBox__content").find(".m-selectBox__priceNew").text();
     $(".m-productDetailMain__priceMain").text(price);
 
+    var priceClean = parseInt($(".m-productDetailMain__priceMain").text().replace(/[^0-9\.]/g, ''));
+    var priceDPH= priceClean-(priceClean*0.21);
+    $(".m-productDetailMain__priceDPH").text(priceDPH + " Kč");
+
     var stock= $(".m-selectBox .m-selectBox__input:checked").siblings(".m-selectBox__content").find(".m-selectBox__stock").text();
     $(".m-productDetailMain__stockText").text(stock);
 
@@ -369,6 +373,10 @@ $(".m-selectBox .m-selectBox__input").click(function () {
 
     var price= $(".m-selectBox .m-selectBox__input:checked").siblings(".m-selectBox__content").find(".m-selectBox__priceNew").text();
     $(".m-productDetailMain__priceMain").text(price);
+    
+    var priceClean = parseInt($(".m-productDetailMain__priceMain").text().replace(/[^0-9\.]/g, ''));
+    var priceDPH= priceClean-(priceClean*0.21);
+    $(".m-productDetailMain__priceDPH").text(priceDPH + " Kč");
 
     var stock= $(".m-selectBox .m-selectBox__input:checked").siblings(".m-selectBox__content").find(".m-selectBox__stock").text();
     $(".m-productDetailMain__stockText").text(stock);
