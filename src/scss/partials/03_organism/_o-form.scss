@@ -444,6 +444,9 @@ input{
         left: 0;
         padding-bottom: 5px;
     }
+    .m-formGroup.-textarea .m-formGroup__label{
+        top: 0;
+    }
     .m-formGroup__input{
         order: 1;
     }

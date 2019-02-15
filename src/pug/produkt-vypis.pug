@@ -13,6 +13,14 @@ html(lang=lang)
             .container.o-pageHeading__container
                 h1.o-pageHeading__title Postele
 
+                .o-subCategories
+                    - for (var i=0; i<5; i++)
+                        .o-subCategories__singleWrap
+                            a.o-subCategories__single(href="#")
+                                img.o-subCategories__img(src=URLbase+"img/product-thumb-medium.jpg" alt="" title="")
+                                .o-subCategories__title Postele
+
+
         include partials/_filter.pug
 
         

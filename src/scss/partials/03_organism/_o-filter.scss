@@ -17,7 +17,7 @@
 }
 .o-filter__responsiveIcon{
     height: 14px;
-    width: 14xp;
+    width: 14px;
 }
 .o-filter__responsiveBottom{
     display: none;
@@ -149,6 +149,12 @@
     .o-filter__link{
         height: 56px;
         border: 0;
+
+        &[aria-expanded="true"]{
+            &::after{
+                content: none;
+            }
+        }
     }
     .o-filter__single:first-child .o-filter__link{
         border-left: 0;
