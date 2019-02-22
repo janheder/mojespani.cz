@@ -1,6 +1,8 @@
 .o-navProducts{
     position: relative;
     z-index: 4;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 .o-navProducts__accordion{
     background: $bg-white;
