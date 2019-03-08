@@ -4,3 +4,13 @@
     position: relative;
     z-index: 4;
 }
+
+
+.o-header.-cart{
+    & .m-navToggler, & .m-navSearchToggler{
+        display: none;
+    }
+    .m-navLogo__link{
+        justify-content: center;
+    }
+}
