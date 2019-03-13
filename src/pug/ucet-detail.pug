@@ -53,6 +53,13 @@ html(lang=lang)
                                         span.m-formGroup__success
 
                                 .col-12.col-md-6
+                                    .o-form__group.m-formGroup       
+                                        input.m-formGroup__input(type="text" name="register_form_username" id="register_form_username" autocomplete="username" required placeholder=" ")
+                                        label.m-formGroup__label(for="register_form_username") Uživatelské jméno
+                                        span.m-formGroup__error Neplatné uživatelské jméno
+                                        span.m-formGroup__success
+
+                                .col-12.col-md-6
                                     .o-form__group.m-formGroup
                                         input.m-formGroup__input(type="email" name="register_form_email" id="register_form_email" autocomplete="email" required placeholder=" ")
                                         label.m-formGroup__label(for="register_form_email") Emailová adresa
@@ -65,7 +72,9 @@ html(lang=lang)
                                         label.m-formGroup__label(for="register_form_tel") Telefonní číslo
                                         span.m-formGroup__error Neplatné číslo
                                         span.m-formGroup__success
-
+                                
+                                .col-12.col-md-12
+                                
                                 .col-12.col-md-6
                                     .o-form__group.m-formGroup
                                         input.m-formGroup__input(type="password" name="register_form_password" id="register_form_password" autocomplete="password" placeholder=" ")
