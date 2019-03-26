@@ -142,6 +142,7 @@ html(lang=lang)
 
         section.o-productDetailVariants
             .container
+                h2.o-productDetailVariants__title Další varianty produktu
                 .o-productDetailVariants__heading
                     .o-productDetailVariants__headinsSingle Název
                     .o-productDetailVariants__headinsSingle Dostupnost
@@ -150,6 +151,8 @@ html(lang=lang)
 
                 - for (var i=0; i<8; i++)
                     .o-productDetailVariants__single
+                        .o-productDetailVariants__imgWrap
+                            img.o-productDetailVariants__img(src=URLbase+"img/product-thumb-small.jpg" alt="#")
                         .o-productDetailVariants__text Laťkový rošt s textilií 180/200 cm
                         .o-productDetailVariants__text.-stock Skladem
                         .o-productDetailVariants__text.-price 426 Kč
