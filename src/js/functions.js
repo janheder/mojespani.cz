@@ -88,25 +88,27 @@ $(document).ready(function(){
 // OBJECT FIT FALLBACK
 // =============================================================================
 
-var styletotest = "object-fit";
-if (styletotest in document.body.style){
-    /*alert("The " + styletotest + " property is supported");*/
-}
-else {
-    $('.b-bgCover__wrap').each(function () {
-        var $container = $(this),
-        imgUrl = $container.find('img.b-bgCover__img').attr('src');
+$(document).ready(function(){
+    var styletotest = "object-fit";
+    if (styletotest in document.body.style){
+        /*alert("The " + styletotest + " property is supported");*/
+    }
+    else {
+        $('.b-bgCover__wrap').each(function () {
+            var $container = $(this),
+            imgUrl = $container.find('img.b-bgCover__img').attr('src');
 
-        if(imgUrl==undefined){imgUrl = $container.find('img.b-bgCover__img').attr('srcset');}
+            if(imgUrl==undefined){imgUrl = $container.find('img.b-bgCover__img').attr('srcset');}
 
-        if (imgUrl) {
-            $(this).css('backgroundImage', 'url(' + imgUrl + ')');
-            $('.b-bgCover__img').css('display','none');
-            $(this).css('background-size','cover');
-            $(this).css('background-position','center center');
-        }  
-    });
-}
+            if (imgUrl) {
+                $(this).css('backgroundImage', 'url(' + imgUrl + ')');
+                $('.b-bgCover__img').css('display','none');
+                $(this).css('background-size','cover');
+                $(this).css('background-position','center center');
+            }  
+        });
+    }
+});
 
 // =============================================================================
 // HERO CAROUSEL CONTROL
@@ -356,8 +358,8 @@ if($(".m-selectBox .m-selectBox__input:checked")){
     $(".m-productDetailMain__priceMain").text(price);
 
     var priceClean = parseInt($(".m-productDetailMain__priceMain").text().replace(/[^0-9\.]/g, ''));
-    var priceDPH= priceClean-(priceClean*0.21);
-    $(".m-productDetailMain__priceDPH").text(priceDPH + " Kč");
+    var priceDPH = priceClean-(priceClean*0.21).toFixed(2);
+    $(".m-productDetailMain__priceDPH").text(priceDPH + " Kč bez DPH");
 
     var stock= $(".m-selectBox .m-selectBox__input:checked").siblings(".m-selectBox__content").find(".m-selectBox__stock").text();
     $(".m-productDetailMain__stockText").text(stock);
@@ -375,8 +377,8 @@ $(".m-selectBox .m-selectBox__input").click(function () {
     $(".m-productDetailMain__priceMain").text(price);
     
     var priceClean = parseInt($(".m-productDetailMain__priceMain").text().replace(/[^0-9\.]/g, ''));
-    var priceDPH= priceClean-(priceClean*0.21);
-    $(".m-productDetailMain__priceDPH").text(priceDPH + " Kč");
+    var priceDPH= priceClean-(priceClean*0.21).toFixed(2);
+    $(".m-productDetailMain__priceDPH").text(priceDPH + " Kč bez DPH");
 
     var stock= $(".m-selectBox .m-selectBox__input:checked").siblings(".m-selectBox__content").find(".m-selectBox__stock").text();
     $(".m-productDetailMain__stockText").text(stock);
@@ -480,6 +482,12 @@ $('.o-cartDeliveryForm .m-formGroup__input[name="doprava"], .o-cartDeliveryForm 
 
 });
 
+
+$(".o-cartDeliveryForm__item input[name='platba']").prop("disabled", true);
+
+$(".o-cartDeliveryForm__item input[name='doprava']").click(function () {
+    $(".o-cartDeliveryForm__item input[name='platba']").load(location.href +".o-cartDeliveryForm__item input[name='platba']>*","");
+});
 
 // =============================================================================
 // CART FREE DELIVERY BAR
