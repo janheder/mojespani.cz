@@ -95,17 +95,19 @@ $(document).ready(function(){
     }
     else {
         $('.b-bgCover__wrap').each(function () {
-            var $container = $(this),
-            imgUrl = $container.find('img.b-bgCover__img').attr('src');
+            $('.b-bgCover__img').each(function () {
+                var $container = $(this),
+                imgUrl = $container.find('img.b-bgCover__img').attr('src');
 
-            if(imgUrl==undefined){imgUrl = $container.find('img.b-bgCover__img').attr('srcset');}
+                if(imgUrl==undefined){imgUrl = $container.find('img.b-bgCover__img').attr('srcset');}
 
-            if (imgUrl) {
-                $(this).css('backgroundImage', 'url(' + imgUrl + ')');
-                $('.b-bgCover__img').css('display','none');
-                $(this).css('background-size','cover');
-                $(this).css('background-position','center center');
-            }  
+                if (imgUrl) {
+                    $(this).css('backgroundImage', 'url(' + imgUrl + ')');
+                    $('.b-bgCover__img').css('display','none');
+                    $(this).css('background-size','cover');
+                    $(this).css('background-position','center center');
+                }  
+            });
         });
     }
 });
