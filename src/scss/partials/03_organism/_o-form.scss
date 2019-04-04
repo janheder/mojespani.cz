@@ -101,6 +101,10 @@ input{
 @media screen and (max-width: 991px){
     .o-form{
         margin: 5px 0;
+        
+        &.-paddingRight{
+            padding-right: 0rem;
+        }
     }
     .o-form__collapseToggler{
         display: flex;
