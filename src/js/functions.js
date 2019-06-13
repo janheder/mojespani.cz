@@ -386,6 +386,9 @@ $(".m-selectBox .m-selectBox__input").click(function () {
     $(".m-productDetailMain__stockText").text(stock);
 
     $(".m-selectBox .m-selectBox__dropdownText").text("Vybráno: " + value);
+    var vybrano = $(".m-selectBox__input:checked + .m-selectBox__content .m-selectBox__img").attr("src").split("/img_produkty/male/").pop();
+    $(".swiper-slide-active .m-productDetailCarousel__link").attr("href", "/img_produkty/velke/" + vybrano);
+    $(".swiper-slide-active .m-productDetailCarousel__img").attr("src", "/img_produkty/velke/" + vybrano);
 });
 
 

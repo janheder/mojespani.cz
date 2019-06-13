@@ -41,6 +41,9 @@
     justify-content: center;
     align-items: center;
 }
+.modal-header--img .o-modal__close{
+    background: rgba(0,0,0,0.5) !important;
+}
 .o-modal__closeIcon{
     height: 14px;
 }
