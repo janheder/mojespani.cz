@@ -1,6 +1,13 @@
 .o-productDescription{
     background: $bg-light;
 }
+.o-productDescription td{
+    border: 0;
+}
+.o-productDescription th{
+    border-bottom: 1px solid $border-grey;
+    border-top: 0;
+}
 
 @media screen and (max-width:991px){
 
