@@ -194,7 +194,7 @@ html(lang=lang)
 
         section.o-sectionSimilar
             .container
-                h1.o-sectionSimilar__title Podobné produkty
+                h1.o-sectionSimilar__title Příslušenství
 
                 .o-sectionSimilar.m-productCarousel(id="product_swiper")
                     .m-productCarousel__content
@@ -214,6 +214,29 @@ html(lang=lang)
                     .swiper-button-prev.m-productCarousel__swiperButton.-prev
                     .swiper-button-next.m-productCarousel__swiperButton.-next
 
+
+
+        section.o-sectionSimilar
+            .container
+                h1.o-sectionSimilar__title Podobné produkty
+
+                .o-sectionSimilar.m-productCarousel(id="product_swiper")
+                    .m-productCarousel__content
+                        .swiper-wrapper.m-productCarousel__wrap
+
+                            .swiper-slide.m-productCarousel__slide
+                                include partials/_single-product-cell.pug
+                            .swiper-slide.m-productCarousel__slide
+                                include partials/_single-product-cell.pug
+                            .swiper-slide.m-productCarousel__slide
+                                include partials/_single-product-cell.pug
+                            .swiper-slide.m-productCarousel__slide
+                                include partials/_single-product-cell.pug
+                            .swiper-slide.m-productCarousel__slide
+                                include partials/_single-product-cell.pug
+                        
+                    .swiper-button-prev.m-productCarousel__swiperButton.-prev
+                    .swiper-button-next.m-productCarousel__swiperButton.-next
 
 
         .productDetailResponsive
